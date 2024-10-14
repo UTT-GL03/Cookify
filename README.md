@@ -30,6 +30,7 @@ L'EcoIndex d'une page (de A à G) est calculé (sources : EcoIndex, Octo, GreenI
 - le nombre de requêtes lancées,
 - le poids des téléchargements,
 - le nombre d'éléments du document.
+
 Nous avons choisi de comparer l'impact des scénarios sur les services de quotidiens nationaux de diverses sensibilités politiques, économiques et environementales :
 - Marmiton
 - Cuisine AZ
