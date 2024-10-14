@@ -14,3 +14,5 @@ La numérisation du partage de recettes avec Cookify a un impact double : elle d
 - Développement de communautés culinaires en ligne, encourageant les échanges de savoirs et de conseils.
 - Incitation à une utilisation raisonnée grâce à des fonctionnalités éco-responsables (algorithmes optimisés, recherche rapide).
 - Réduction de l’empreinte carbone numérique par la sensibilisation des utilisateurs à des pratiques durables (réduction du temps de navigation, gestion optimisée des ressources).
+
+Test de commit
