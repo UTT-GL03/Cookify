@@ -34,4 +34,5 @@ Nous avons choisi de comparer l'impact des scénarios sur les services de quotid
 - Marmiton
 - Cuisine AZ
 - PtitChef
+
 Vous pouvez accéder au résultat en cliquant sur le lien suivant (attention, d'une journée à l'autre, on peut observer une certaine variabilité) : [résultats](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/Cookify/refs/heads/main/benchmarks/results.html)
