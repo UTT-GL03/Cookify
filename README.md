@@ -14,3 +14,24 @@ La numérisation du partage de recettes avec Cookify a un impact double : elle d
 - Développement de communautés culinaires en ligne, encourageant les échanges de savoirs et de conseils.
 - Incitation à une utilisation raisonnée grâce à des fonctionnalités éco-responsables (algorithmes optimisés, recherche rapide).
 - Réduction de l’empreinte carbone numérique par la sensibilisation des utilisateurs à des pratiques durables (réduction du temps de navigation, gestion optimisée des ressources).
+# Scénarios d'usage et impacts
+Nous partons de l'hypothèse que les utilisateurs visitent les sites de recettes principalement dans le but de découvrir de nouvelles idées de repas, de trouver des recettes spécifiques, ou de s'inspirer pour leur prochain repas. Ces visites peuvent se produire à tout moment de la journée, notamment lors de pauses ou pendant la préparation des repas.
+# Scénario 1 : "Consulter la liste recettes de la page d'accueil"
+1. L’utilisateur se rend sur le site internet
+2. L’utilisateur accède à la page d'accueil où sont affichés un certains nombre de recette
+3. L'utilisateur consulte toute les recettes de page d'accuei en scrollant en bas de la page
+# Scénario 2 : "L'utilisateur souhaite lire une recette en particulier"
+1. L'utilisateur se rend sur la page d'accueil
+2. Il clique sur une recette
+3. Il consulte la recette en scrollant vers le bas
+4. Il retourne à la page d'accueil
+# Impact de l'exécution des scénarios auprès de différents services concurrents
+L'EcoIndex d'une page (de A à G) est calculé (sources : EcoIndex, Octo, GreenIT) en fonction du positionnement de cette page parmi les pages mondiales concernant :
+- le nombre de requêtes lancées,
+- le poids des téléchargements,
+- le nombre d'éléments du document.
+Nous avons choisi de comparer l'impact des scénarios sur les services de quotidiens nationaux de diverses sensibilités politiques, économiques et environementales :
+- Marmiton
+- Cuisine AZ
+- PtitChef
+Vous pouvez accéder au résultat en cliquant sur le lien suivant (attention, d'une journée à l'autre, on peut observer une certaine variabilité) : [résultats](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/Cookify/refs/heads/main/benchmarks/results.html)
