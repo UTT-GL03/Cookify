@@ -1,0 +1,78 @@
+- name: "Marmiton"
+  url: "https://www.marmiton.org/"
+  actions:
+    - name: Lire la page d'accueil
+      type: "scroll"
+
+    - name: Cliquer sur la page des Petit-déj gourmand
+      type: click
+      element: "text/Petit-déj gourmand"
+      screenshot: "output/dej.png"
+      pageChange: true
+
+    - name: Cliquer sur un petit déj
+      type: click
+      element: "body > header > nav > ul > li:nth-child(2) > a > p"
+      screenshot: "output/food.png"
+
+    - name: Lire la page de la recette
+      type: "scroll"
+
+    - name: Cliquer sur la page pour mieux manger
+      type: click
+      element: "body > header > nav > ul > li:nth-child(1) > a"
+      screenshot: "output/manger.png"
+
+    - name: Revenir à l'accueil
+      type: click
+      element: "body > header > div.mrtn-header-container > a"
+      screenshot: "output/accueil.png"
+      pageChange: true
+
+- name: "Cuisine AZ"
+  url: "https://www.cuisineaz.com/"
+  actions:
+    - name: Lire la page d'accueil
+      type: "scroll"
+
+    - name: Cliquer sur une recette de potimaron"
+      type: click
+      element: "#REC73776 > div.tile_content.txt-center.p20.portrait > a"
+      pageChange: true
+
+    - name: Lire la page de la recette
+      type: "scroll"
+
+    - name: Revenir à la page d'accueil
+      type: click
+      element: "#siteheader > div > div.siteheader_left > a > svg"
+      pageChange: true
+
+- name: "PtitChef"
+  url: "https://www.ptitchef.com/"
+  actions:
+    - name: Accepter les cookies
+      type: click
+      element: "text/Tout accepter"
+
+    - name: Lire la page d'accueil
+      type: "scroll"
+
+    #- name: Choisir la recette Wrap moelleux
+    #type: click
+    #element: "a.item[title='Recette Wrap moelleux et super protéiné aux œufs et à la feta']"
+    #pageChange: true
+    #waitForSelector: ".article__paragraph"
+
+    - name: Cliquer sur une recette
+      type: click
+      element: "text/Wrap moelleux et super protéiné aux œufs et à la feta"
+      pageChange: true
+
+    - name: Lire la page de la recette
+      type: "scroll"
+
+    - name: Revenir à la page d'accueil
+      type: click
+      element: "body > div.pheader > div.pheader__main.clearfix > div.pheader__main__left > a > img"
+      pageChange: true
