@@ -37,3 +37,26 @@ Nous avons choisi de comparer l'impact des scénarios sur les services de quotid
 - PtitChef
 
 Vous pouvez accéder au résultat en cliquant sur le lien suivant (attention, d'une journée à l'autre, on peut observer une certaine variabilité) : [résultats](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/Cookify/refs/heads/main/benchmarks/results.html)
+
+## Maquette de l'interface et échantillon de données
+
+Au vu des différents services comparés, des exigences environnementales exprimées plus haut et des scénarios retenus, nous avons défini pour notre prototype une maquette de l'interface et un échantillon de données réalistes.
+
+L'interface retenue est composée de trois types de "pages Web" :
+
+- la page d'accueil composée des types de programme de recette (Pour le sport, pour les végétariens, pour le plaisir,etc...),
+- la page composée des recettes disponibles d'un des programmes,
+- La page d'une recette.
+
+![Maquette de la page d'accueil](./frontend/mockup_page_accueil.png)
+__Fig.1__: Maquette de la page d'accueil
+
+![Maquette de la liste de recette](./frontend/mockup_liste_recette.png)
+__Fig.2__: Maquette de la liste de recette après avoir cliqué sur un programme 
+
+![Maquette de la recette](./frontend/mockup_recette.png)
+__Fig.3__: Maquette d'une recette
+
+Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec [`dummy-json`](https://dummyjson.com)).
+Bien que fictives, ces données correspondent à la structure des services concurrents : 10 recettes comportant un titre, son programme, son temps de préparation, sa difficulté, ses ingrédients et ses étapes(voir [modèle de données](./frontend/sample_data.hbs)). 
+Dans un objectif de sobriété environnementale, les photos ont été limités au maximum et le nombres de recettes limités à 30 par programme.
