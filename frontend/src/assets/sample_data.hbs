@@ -1,0 +1,13 @@
+{
+"recettes": [
+{{#repeat min=20 max=30}}
+{
+"section": "{{random 'Sport' 'Végé' 'Plaisir'}}",
+"creator": "{{firstName}} {{lastName}}",
+"heading": "{{lorem min=3 max=15}}",
+"ingredient" : "{{lorem min=10 max=50}}"
+"description": "{{#repeat min=1 max=15 comma=false}}{{lorem min=5 max=120}}\n\n{{/repeat}}"
+}
+{{/repeat}}
+]
+}
