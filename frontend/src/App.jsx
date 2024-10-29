@@ -1,19 +1,16 @@
-// App.js
 import React from 'react';
-import Header from './components/Header';
-import Section from './components/Section';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './components/HomePage';
+import RecipeListPage from './components/RecipeListPage';
 
 const App = () => {
   return (
-    <div className="app">
-      <Header />
-      <div className="sections-container">
-        <Section title="Pour le sport" description="Recettes adaptées pour les sportifs, riches en protéines et en énergie." />
-        <Section title="Pour les végétariens" description="Recettes sans viande, riches en légumes et protéines végétales." />
-        <Section title="Pour le plaisir" description="Recettes gourmandes pour se faire plaisir, tout en restant équilibré." />
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/recipes/:section" element={<RecipeListPage />} />
+      </Routes>
+    </Router>
   );
 };
 
