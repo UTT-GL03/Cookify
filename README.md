@@ -16,11 +16,11 @@ L'impact de la numérisation sur le partage de recettes est double. En remplaça
 - Réduction de l’empreinte carbone numérique par la sensibilisation des utilisateurs à des pratiques durables (réduction du temps de navigation, gestion optimisée des ressources).
 # Scénarios d'usage et impacts
 Nous partons de l'hypothèse que les utilisateurs visitent les sites de recettes principalement dans le but de découvrir de nouvelles idées de repas, de trouver des recettes spécifiques, ou de s'inspirer pour leur prochain repas. Ces visites peuvent se produire à tout moment de la journée, notamment lors de pauses ou pendant la préparation des repas.
-# Scénario 1 : "Consulter la liste recettes de la page d'accueil"
+<!-- # Scénario 1 : "Consulter la liste recettes de la page d'accueil"
 1. L’utilisateur se rend sur le site internet
 2. L’utilisateur accède à la page d'accueil où sont affichés un certains nombre de recette
-3. L'utilisateur consulte toute les recettes de page d'accuei en scrollant en bas de la page
-# Scénario 2 : "L'utilisateur souhaite lire une recette en particulier"
+3. L'utilisateur consulte toute les recettes de page d'accuei en scrollant en bas de la page -->
+# Scénario 1 : "L'utilisateur souhaite lire une recette en particulier"
 1. L'utilisateur se rend sur la page d'accueil
 2. Il clique sur une recette
 3. Il consulte la recette en scrollant vers le bas
