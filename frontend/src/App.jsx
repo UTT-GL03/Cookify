@@ -1,37 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import data from './assets/sample_data.json'
-import './App.css'
+// App.js
+import React from 'react';
+import Header from './components/Header';
+import Section from './components/Section';
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
-  console.log(data)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="app">
+      <Header />
+      <div className="sections-container">
+        <Section title="Pour le sport" description="Recettes adaptées pour les sportifs, riches en protéines et en énergie." />
+        <Section title="Pour les végétariens" description="Recettes sans viande, riches en légumes et protéines végétales." />
+        <Section title="Pour le plaisir" description="Recettes gourmandes pour se faire plaisir, tout en restant équilibré." />
       </div>
-      <h1>Cookify</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default App
+export default App;
