@@ -1,29 +1,28 @@
 // components/RecipeListPage.js
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import './../RecipeListPage.css';
+import { useParams, Link } from 'react-router-dom';
+import sampleData from '../assets/sample_data.json';
+import '../RecipeListPage.css';
 
 const RecipeListPage = () => {
     const { section } = useParams();
-    const recipes = [
-        { title: 'Recette 1', description: 'Description de la recette 1' },
-        { title: 'Recette 2', description: 'Description de la recette 2' },
-        { title: 'Recette 3', description: 'Description de la recette 3' },
-        { title: 'Recette 4', description: 'Description de la recette 4' },
-        { title: 'Recette 5', description: 'Description de la recette 5' },
-        { title: 'Recette 6', description: 'Description de la recette 6' },
-    ];
+    const recipes = sampleData.recipes.filter(recipe => recipe.section === section);
 
     return (
         <div className="recipe-list-page">
-            <h1>Recettes pour {section}</h1>
+            <h1>Recettes pour la section "{section}"</h1>
             <div className="recipes-container">
-                {recipes.map((recipe, index) => (
-                    <div key={index} className="recipe">
-                        <h2>{recipe.title}</h2>
-                        <p>{recipe.description}</p>
-                    </div>
-                ))}
+                {recipes.length > 0 ? (
+                    recipes.map((recipe) => (
+                        <div key={recipe.title} className="recipe-card">
+                            <Link to={`/recipes/${section}/${encodeURIComponent(recipe.title)}`} className="recipe-link">
+                                <h3>{recipe.title}</h3>
+                            </Link>
+                        </div>
+                    ))
+                ) : (
+                    <p>Aucune recette trouvée pour cette section.</p>
+                )}
             </div>
         </div>
     );

@@ -1,31 +1,26 @@
+// components/HomePage.js
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import Header from './Header';
-import './../HomePage.css';
+import { Link } from 'react-router-dom';
+import '../HomePage.css';
 
 const HomePage = () => {
-    const navigate = useNavigate();
-
-    const handleSectionClick = (section) => {
-        navigate(`/recipes/${section}`);
-    };
-
     return (
         <div className="home-page">
-            <Header />
-            <div className="sections-container">
-                <div className="section" onClick={() => handleSectionClick('sport')}>
-                    <h2>Pour le sport</h2>
-                    <p>Recettes adaptées pour les sportifs, riches en protéines et en énergie.</p>
-                </div>
-                <div className="section" onClick={() => handleSectionClick('vegetarien')}>
-                    <h2>Pour les végétariens</h2>
-                    <p>Recettes sans viande, riches en légumes et protéines végétales.</p>
-                </div>
-                <div className="section" onClick={() => handleSectionClick('plaisir')}>
-                    <h2>Pour le plaisir</h2>
-                    <p>Recettes gourmandes pour se faire plaisir, tout en restant équilibré.</p>
-                </div>
+            <h1>Bienvenue sur Cookify</h1>
+            <p>Découvrez des recettes inspirantes et respectueuses de l'environnement pour tous les goûts !</p>
+            <div className="sections">
+                <Link to="/recipes/Végé" className="section">
+                    <h2>Végé</h2>
+                    <p>Des recettes végétariennes riches en saveurs.</p>
+                </Link>
+                <Link to="/recipes/Sport" className="section">
+                    <h2>Sport</h2>
+                    <p>Des repas énergétiques pour les sportifs.</p>
+                </Link>
+                <Link to="/recipes/Plaisir" className="section">
+                    <h2>Plaisir</h2>
+                    <p>Pour les gourmands à la recherche de plaisir culinaire.</p>
+                </Link>
             </div>
         </div>
     );

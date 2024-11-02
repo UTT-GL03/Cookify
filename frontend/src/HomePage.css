@@ -1,23 +1,134 @@
-.home-page {
-    text-align: center;
+/* HomePage.css */
+body {
+    background-color: #121212;
+    /* Fond sombre */
+    color: #e0e0e0;
+    /* Texte clair */
+    font-family: Arial, sans-serif;
 }
 
-.sections-container {
+.home-page {
+    text-align: center;
+    padding: 20px;
+}
+
+.sections {
     display: flex;
     justify-content: space-around;
-    padding: 20px;
+    gap: 20px;
 }
 
 .section {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    width: 250px;
-    cursor: pointer;
-    transition: transform 0.2s;
+    padding: 15px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.section h2 {
+    margin: 0;
+    color: #ff8c00;
+}
+
+.section p {
+    font-size: 0.9em;
+    color: #b0b0b0;
 }
 
 .section:hover {
-    transform: scale(1.05);
+    background-color: #333;
+}
+
+/* HomePage.css */
+body {
+    background-color: #121212;
+    /* Fond sombre */
+    color: #e0e0e0;
+    /* Texte clair */
+    font-family: Arial, sans-serif;
+}
+
+.home-page {
+    text-align: center;
+    padding: 20px;
+}
+
+.sections {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.section {
+    padding: 15px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.section h2 {
+    margin: 0;
+    color: #ff8c00;
+}
+
+.section p {
+    font-size: 0.9em;
+    color: #b0b0b0;
+}
+
+.section:hover {
+    background-color: #333;
+}
+
+/* HomePage.css */
+body {
+    background-color: #121212;
+    /* Fond sombre */
+    color: #e0e0e0;
+    /* Texte clair */
+    font-family: Arial, sans-serif;
+}
+
+.home-page {
+    text-align: center;
+    padding: 20px;
+}
+
+.sections {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.section {
+    padding: 15px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.section h2 {
+    margin: 0;
+    color: #ff8c00;
+}
+
+.section p {
+    font-size: 0.9em;
+    color: #b0b0b0;
+}
+
+.section:hover {
+    background-color: #333;
 }
