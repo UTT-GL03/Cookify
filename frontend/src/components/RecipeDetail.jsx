@@ -1,18 +1,13 @@
-// components/RecipeDetail.js
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import sampleData from '../assets/sample_data.json';
 import '../RecipeDetail.css';
 
-const RecipeDetail = () => {
-    const { section, title } = useParams();
-    const decodedTitle = decodeURIComponent(title);
-    const recipe = sampleData.recipes.find(
-        (r) => r.title === decodedTitle && r.section === section
-    );
+const RecipeDetail = ({ data }) => {
+    const { id } = useParams();
+    const recipe = data.find(recipe => recipe.id === parseInt(id));
 
     if (!recipe) {
-        return <p>Recette non trouvée.</p>;
+        return <p>Recette non trouvée</p>;
     }
 
     return (
