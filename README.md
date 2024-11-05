@@ -112,6 +112,7 @@ Avec l'ajout de ce modèle de page et la mise en place de la navigation entre le
 | 1. Choisir la categorie 					   | 95.69 A🟢 | 1,09 | 23 | 4 | 59
 | 2. Choisir et lire une recette 			   | 95.69 A🟢 | 1,09 |  23 | 4 | 59
 | 3. Revenir à la page de choix des categories	| 95.69 A🟢 | 1,09 | 23 | 4 | 59
+
 __Tab.2__: Évaluation de l'impact du scénario "Lire des recettes parmi les recettes du jour" dans le prototype n°1.
 
 Ces estimations bien qu'artificiellement basses (puisque les données sont chargées de manière statique) sont tout de même à comparer avec celle des site différents
