@@ -20,9 +20,14 @@ Nous partons de l'hypothèse que les utilisateurs visitent les sites de recettes
 1. L’utilisateur se rend sur le site internet
 2. L’utilisateur accède à la page d'accueil où sont affichés un certains nombre de recette
 3. L'utilisateur consulte toute les recettes de page d'accuei en scrollant en bas de la page -->
-# Scénario 1 : "L'utilisateur souhaite lire une recette en particulier"
+# Scénario 1 : "L'utilisateur souhaite lire une recette"
 1. L'utilisateur se rend sur la page d'accueil
 2. Il clique sur une recette
+3. Il consulte la recette en scrollant vers le bas
+4. Il retourne à la page d'accueil
+# Scénario 2 : "L'utilisateur souhaite consulter une recette en particulier"
+1. L'utilisateur se rend sur la page d'accueil
+2. Il choisit une recette en particulier
 3. Il consulte la recette en scrollant vers le bas
 4. Il retourne à la page d'accueil
 # Impact de l'exécution des scénarios auprès de différents services concurrents
