@@ -1,9 +1,5 @@
-baseURL: http://localhost:8080
+baseURL: https://utt.fr
 projectName: Cookify
 scenarios:
   - path: ./benchmarks/scenario1.js
     name: Consulter les sections
-  - path: ./benchmarks/scenario2.js
-    name: Consulter une recette
-containers:
-  - cookify-static_hosting-1
