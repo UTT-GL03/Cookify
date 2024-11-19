@@ -23,7 +23,7 @@ Nous partons de l'hypothèse que les utilisateurs visitent les sites de recettes
 # Scénario 1 : "L'utilisateur souhaite consulter une recette"
 1. L'utilisateur se rend sur la page d'accueil
 2. Il regarde la liste des recettes qui lui sont proposées
-3. Il choisit une recette au hasard et il l'a consulte
+3. Il choisit une recette et il l'a consulte
 4. Il retourne à la page d'accueil
 # Scénario 2 : "L'utilisateur souhaite consulter une recette en particulier"
 1. L'utilisateur se rend sur la page d'accueil
@@ -36,12 +36,37 @@ L'EcoIndex d'une page (de A à G) est calculé (sources : EcoIndex, Octo, GreenI
 - le poids des téléchargements,
 - le nombre d'éléments du document.
 
-Nous avons choisi de comparer l'impact des scénarios sur les services de quotidiens nationaux de diverses sensibilités politiques, économiques et environementales :
+Nous avons choisi de comparer l'impact des scénarios sur les sites de cuisine principaux suivants:
 - Marmiton
 - Cuisine AZ
 - PtitChef
 
 Vous pouvez accéder au résultat en cliquant sur le lien suivant (attention, d'une journée à l'autre, on peut observer une certaine variabilité) : [résultats](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/Cookify/refs/heads/main/benchmarks/results.html)
+
+A partir de ces résultats, plusieurs remarques peuvent être pertinente. 
+# Premièrement, on peut identifier les sources d'inmpact:
+
+Taille des Pages Web : Des pages volumineuses nécessitent plus de ressources pour le chargement, augmentant ainsi la consommation d'énergie.
+
+Nombre de Requêtes HTTP : Un nombre élevé de requêtes sollicite davantage les serveurs et prolonge le temps de chargement, ce qui accroît l'empreinte carbone.
+
+Utilisation d'Images Non Optimisées : Des images de grande taille ou mal compressées augmentent la taille des pages et la consommation de bande passante.
+
+Scripts et Feuilles de Style Non Minifiés : Des fichiers JavaScript et CSS non optimisés alourdissent les pages et ralentissent leur chargement.
+
+# Deuxièmement, on peut identifier le caractère évitable de ces impacts. 
+
+On remarque notamment que la majorité de ces impacts peuvent être réduits grâce à des pratiques d'écoconception web :
+
+Optimisation des Images : Compresser les images et utiliser des formats adaptés réduit significativement leur poids.
+
+Minification des Fichiers : Réduire la taille des fichiers CSS et JavaScript en supprimant les espaces inutiles et les commentaires améliore les performances.
+
+Réduction des Requêtes HTTP : Combiner les fichiers CSS et JavaScript, utiliser des sprites pour les images et limiter les ressources externes diminuent le nombre de requêtes.
+
+Mise en Cache Efficace : Configurer correctement les en-têtes de cache permet de réduire les requêtes répétées et d'accélérer le chargement des pages.
+
+En adoptant ces pratiques, il serait théoriquement possible de diminuer l'impact environnemental de ces sites webs.
 
 ## Maquette de l'interface et échantillon de données
 
