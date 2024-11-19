@@ -144,7 +144,7 @@ __Tab.3__ : Impact en mg CO2e de la consultation proprement dite des pages des s
 
 Pour les services existants, sur le graphique présentant l'utilisation dans le temps des ressources (cf. Fig.4), on constate d'autres pics que le pic initial, probablement associés au chargement et à l'affichage de contenus multimédias et de publicités, ou causés par des techniques de pistage sur le Web.
 
-![Impact de site de recette Marmiton](./benchmarks/Marmiton_homepage.png)
+![Impact du site de recette Marmiton](./benchmarks/Marmiton_homepage.png)
 __Fig.4__: Consommation de ressource lors de la consultation de la page des recettes de *Marmiton*.
 
 Pour notre prototype, au contraire, le graphique (cf. Fig.5) présente un unique pic significatif de consommation de CPU et de réseau.
