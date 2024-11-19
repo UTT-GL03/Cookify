@@ -1,7 +1,7 @@
 {
-    "recipes": [
+    "docs": [
         {
-            "id": 1,
+            "_id": "1",
             "title": "Aenean it lectus.",
             "section": "Végé",
             "prepTime": "59 minutes",
@@ -18,7 +18,7 @@
             ]
         },
         {
-            "id": 2,
+            "_id": "2",
             "title": "Magna nisi sit.",
             "section": "Sport",
             "prepTime": "13 minutes",
@@ -35,7 +35,7 @@
             ]
         },
         {
-            "id": 3,
+            "_id": "3",
             "title": "Nisi eu neque.",
             "section": "Végé",
             "prepTime": "32 minutes",
@@ -52,7 +52,7 @@
             ]
         },
         {
-            "id": 4,
+            "_id": "4",
             "title": "Imperdiet con vehicula.",
             "section": "Sport",
             "prepTime": "36 minutes",
@@ -69,7 +69,7 @@
             ]
         },
         {
-            "id": 5,
+            "_id": "5",
             "title": "Sed curabitur sollicitudin.",
             "section": "Plaisir",
             "prepTime": "12 minutes",
@@ -86,7 +86,7 @@
             ]
         },
         {
-            "id": 6,
+            "_id": "6",
             "title": "Faucibus lacus sodales.",
             "section": "Végé",
             "prepTime": "31 minutes",
@@ -103,7 +103,7 @@
             ]
         },
         {
-            "id": 7,
+            "_id": "7",
             "title": "Non gravida eros.",
             "section": "Sport",
             "prepTime": "27 minutes",
@@ -120,7 +120,7 @@
             ]
         },
         {
-            "id": 8,
+            "_id": "8",
             "title": "Nulla consectetur amet.",
             "section": "Sport",
             "prepTime": "23 minutes",
@@ -137,7 +137,7 @@
             ]
         },
         {
-            "id": 9,
+            "_id": "9",
             "title": "Sit aenean faucibus.",
             "section": "Plaisir",
             "prepTime": "51 minutes",
@@ -154,7 +154,7 @@
             ]
         },
         {
-            "id": 10,
+            "_id": "10",
             "title": "Blandit cit pellentesque.",
             "section": "Plaisir",
             "prepTime": "38 minutes",

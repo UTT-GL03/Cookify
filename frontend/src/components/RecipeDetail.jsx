@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom';
 import '../RecipeDetail.css';
 
 const RecipeDetail = ({ data }) => {
-    const { id } = useParams();
-    const recipe = data.find(recipe => recipe.id === parseInt(id));
+    const { _id } = useParams();
+    const recipe = data.find(recipe => recipe._id === _id);
 
     if (!recipe) {
         return <p>Recette non trouvée</p>;

@@ -11,8 +11,8 @@ const RecipeListPage = ({ data }) => {
             <h1>Recettes pour la section "{section}"</h1>
             <div className="recipes-container">
                 {recipes.map((recipe) => (
-                    <div key={recipe.id} className="recipe-card">
-                        <Link to={`/recipe/${recipe.id}`} className="recipe-link">
+                    <div key={recipe._id} className="recipe-card">
+                        <Link to={`/recipe/${recipe._id}`} className="recipe-link">
                             <h3>{recipe.title}</h3>
                         </Link>
                     </div>

@@ -12,24 +12,29 @@ const App = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Charger les données avant de rendre les autres composants
     const fetchData = async () => {
       try {
-        const response = await fetch('/sample_data.json');
+        const response = await fetch('http://localhost:5984/cookify_1/_all_docs?include_docs=true');
         if (!response.ok) {
           throw new Error('Erreur lors du chargement des données');
         }
         const result = await response.json();
-        setData(result.recipes);
+  
+        // Extraire les documents de la réponse
+        const recipes = result.rows.map((row) => row.doc);
+  
+        // Mettre à jour l'état avec les recettes
+        setData(recipes);
         setLoading(false);
       } catch (err) {
         setError(err.message);
         setLoading(false);
       }
     };
-
+  
     fetchData();
   }, []);
+  
 
   if (loading) {
     return <p>Chargement des données...</p>;
@@ -50,7 +55,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/recipes/:section" element={<RecipeListPage data={data} />} />
-          <Route path="/recipe/:id" element={<RecipeDetail data={data} />} />
+          <Route path="/recipe/:_id" element={<RecipeDetail data={data} />} />
         </Routes>
       </div>
     </Router>
