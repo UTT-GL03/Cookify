@@ -3,17 +3,24 @@ Cookify est une plateforme dédiée aux amateurs de cuisine à la recherche de r
 # Choix du sujet
 Nous avons choisi de créer Cookify en raison de la montée en popularité des plateformes culinaires en ligne et de l'engouement croissant pour la cuisine maison. Nous sommes dans un monde où l'alimentation saine, diversifiée et respectueuse de l'environnement prend une place importante. Il nous semble alors essentiel de donner à tout le monde l'opportunité de pouvoir trouver des recettes à leur goût et respectant leur valeurs. Ce prototype vise donc à fournir des idées que les plateformes majeures pourraient intégrer pour offrir des options plus durables et éco-responsables.
 # Utilité sociale
-L’utilité sociale de ce projet réside dans sa capacité à proposer une alternative plus durable et plus saine aux recettes que nous avons l’habitude de cuisiner au quotidien. Ce projet permettra de limiter la pollution grâce à des recettes adaptées aux enjeux actuels. En rendant notre prototype public, nous espérons que les plateformes établies pourront adopter certaines de ses idées, telles que : 
-- permettre l'exploration des cultures à travers la cuisine et le partage de savoir-faire
-- Encourager les habitudes alimentaires saines et responsables
-- Renforcer les liens entre les utilisateurs
-- Offrir une plateforme allégée, sans publicité, qui met en avant l’essentiel pour l’utilisateur
+L’utilité sociale des plateformes de partage de recettes réside dans leur capacité à offrir une alternative plus accessible et plus diversifiée aux recettes que nous cuisinons au quotidien. Ces plateformes permettent à chacun d'explorer différentes cultures culinaires, favorisent des habitudes alimentaires saines et responsables, et renforcent les liens entre utilisateurs du monde entier. En particulier, ces plateformes permettent :
+- d'explorer les cultures à travers la cuisine et le partage de savoir-faire,
+- d'encourager des habitudes alimentaires saines et responsables,
+- de renforcer les liens entre les utilisateurs grâce aux interactions et au partage de recettes,
+- d'offrir une plateforme allégée, sans publicité, qui met en avant l'essentiel pour l'utilisateur.
 # Effet de la numérisation
-L'impact de la numérisation sur le partage de recettes est double. En remplaçant les livres de cuisine par des services en ligne, nous facilitons l'accès à une vaste base de données de recettes, mais augmentons aussi la consommation de ressources numériques. Ce prototype vise à inspirer une approche plus éco-responsable pour les services existants en mettant l’accent sur :
-- Accès facilité à une large base de recettes, accessible à toute heure et partout dans le monde.
-- Développement de communautés culinaires en ligne, encourageant les échanges de savoirs et de conseils.
-- Incitation à une utilisation raisonnée grâce à des fonctionnalités éco-responsables (algorithmes optimisés, recherche rapide).
-- Réduction de l’empreinte carbone numérique par la sensibilisation des utilisateurs à des pratiques durables (réduction du temps de navigation, gestion optimisée des ressources).
+L'impact de la numérisation sur le partage de recettes est double. En remplaçant les livres de cuisine par des services en ligne, nous facilitons l'accès à une vaste base de données de recettes, tout en augmentant la consommation de ressources numériques. Pour bien comprendre cet équilibre, il est intéressant de comparer l'empreinte carbone d'une consultation numérique à celle d'une consultation dans un livre de recettes. Selon une étude, la fabrication d'un livre de 300 pages émet environ 1,3 kg de CO₂ ([youmatter](https://youmatter.world/fr/categorie-environnement/liseuse-livre-ecologique-impact-environnement/)). La fabrication d'un livre a un coût environnemental initial important, nécessitant du papier, de l'encre et de l'énergie pour l'impression et le transport. Toutefois, ce coût est divisé par le nombre de consultations au cours de son cycle de vie, rendant le livre souvent plus favorable sur le long terme, surtout lorsqu'il est utilisé fréquemment et partagé entre plusieurs personnes.
+
+En revanche, les sites web culinaires nécessitent de l'énergie à chaque consultation, impliquant l'utilisation d'appareils électroniques et de serveurs. L'empreinte carbone d'une page web dépend de sa conception, de son hébergement et des pratiques des utilisateurs. Les consultations répétées et le temps passé en ligne peuvent augmenter cet impact, bien que des optimisations (comme la compression des images et la réduction des requêtes) puissent réduire la consommation énergétique.
+
+Ce prototype vise cependant à inspirer une approche plus éco-responsable des services existants en mettant l'accent sur les avantages suivants :
+
+- un accès facilité à une large base de recettes, disponible à toute heure et partout dans le monde,
+- le développement de communautés culinaires en ligne, encourageant les échanges de savoirs et de conseils,
+- une incitation à une utilisation raisonnable grâce à des fonctionnalités éco-responsables (algorithmes optimisés, recherche rapide),
+- une réduction de l’empreinte carbone numérique par la sensibilisation des utilisateurs à des pratiques durables (réduction du temps de navigation, gestion optimisée des ressources).
+
+En présentant ces différents apports, les plateformes culinaires numériques peuvent être perçues comme une évolution utile, à condition d’intégrer une véritable réflexion sur leur impact environnemental et de chercher constamment à l'optimiser.
 # Scénarios d'usage et impacts
 Nous partons de l'hypothèse que les utilisateurs visitent les sites de recettes principalement dans le but de découvrir de nouvelles idées de repas, de trouver des recettes spécifiques, ou de s'inspirer pour leur prochain repas. Ces visites peuvent se produire à tout moment de la journée, notamment lors de pauses ou pendant la préparation des repas.
 <!-- # Scénario 1 : "Consulter la liste recettes de la page d'accueil"
