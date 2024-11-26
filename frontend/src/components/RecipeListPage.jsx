@@ -19,9 +19,10 @@ const RecipeListPage = () => {
               body: JSON.stringify({
                 selector: {
                   section: section // Utilisation de la section passée en paramètre
-                }
+                },
+                limit: 25 // Limiter à 25 résultats
               }),
-            });
+            });            
     
             if (!response.ok) {
               throw new Error('Erreur lors du chargement des données');
