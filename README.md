@@ -296,7 +296,7 @@ Consulter une recette :
 - Réseau : Consommation de 2 mWh.
 - Écran : 68 mWh (94%), légèrement supérieure à la consultation de la section.
 
-Les graphiques montrent également l'évolution de l'impact énergétique du backend (CouchDB), où l'utilisation du CPU a augmenté de plus de 242% par rapport au prototype précédent.
+Les graphiques montrent également l'évolution de l'impact énergétique du backend (CouchDB), où l'utilisation du CPU a augmenté significativement par rapport au prototype précédent.
 
 **Principales Sources d'Impact**
 
