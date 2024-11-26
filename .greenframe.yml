@@ -2,7 +2,7 @@ baseURL: http://localhost:8080
 projectName: Cookify
 scenarios:
   - path: ./benchmarks/scenario1.js
-    name: Consulter les sections
+    name: Consulter la section Sport
   - path: ./benchmarks/scenario2.js
     name: Consulter une recette
 containers:
