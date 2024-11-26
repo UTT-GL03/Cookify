@@ -44,9 +44,10 @@ services:
     depends_on:
       accessible_backend:
         condition: service_completed_successfully
-index:
+
+  index:  # Move the index under services
     image: curlimages/curl
-    entrypoint: ["/bin/sh","-c"]
+    entrypoint: ["/bin/sh", "-c"]
     volumes:
       - ./backend/section_index.json:/section_index.json
     command:
@@ -55,3 +56,4 @@ index:
     depends_on:
       accessible_backend:
         condition: service_completed_successfully
+
