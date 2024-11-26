@@ -263,3 +263,46 @@ Avec le prototype n°3, nous avons migré vers une base de données CouchDB inte
 - Consommation réseau : En hausse par rapport au prototype n°2, en raison des requêtes pour récupérer les données depuis la base.
 - Consommation CPU : Une légère augmentation du CPU a été observée, liée au traitement des requêtes et à la gestion des réponses JSON.
 - Flexibilité : Le passage à une base de données dynamique offre une grande flexibilité pour ajouter, supprimer ou modifier des recettes sans intervention côté client.
+
+## Prototype n°4 : Évolution avec une mise à l'échelle des données
+
+Pour cette version du prototype, nous avons effectué une mise à l'échelle des données en passant de 25 recettes à 3000, afin de simuler un usage équivalent à plusieurs mois d'utilisation. L'objectif était d'évaluer l'impact de cette augmentation significative des données sur la consommation énergétique de notre application, notamment pour comprendre comment le backend (CouchDB) et le frontend géraient ce changement de volume.
+
+**Analyse des Résultats GreenFrame**
+
+Les résultats de l'analyse GreenFrame pour le prototype n°4 montrent un impact énergétique significativement plus élevé par rapport au prototype n°3 (fig 9). Le passage à 3000 recettes a permis de mieux comprendre l'effet de la mise à l'échelle des données sur la consommation des différents composants de l'application.
+
+![Consulter une Section](./benchmarks/ConsulterSection_ProtoV4.png)
+__Fig.9__: Consulter une Section Proto V4
+
+
+Voici un résumé des résultats :
+
+**Comparaison entre Prototype n°3 et Prototype n°4**
+
+Prototype n°3 : Les données étaient stockées dans CouchDB, mais en quantités limitées à 25 recettes. La consommation énergétique était relativement faible, avec une consommation globale estimée à 64 mg eq. CO₂ par minute (144 mWh).
+
+Prototype n°4 : Avec 3000 recettes, l'impact global est passé à 295 mg eq. CO₂ par minute, soit une augmentation considérable de la consommation, en particulier pour le backend qui gère les requêtes de consultation de la base de données. Voici les détails :
+
+Consulter la section "Sport" :
+
+- CPU : Consommation de 2.1 mWh (3% du total).
+- Réseau : Consommation élevée à 3.2 mWh, soit 4% de l'énergie totale.
+- Écran : Toujours la composante majeure avec 67 mWh (92%).
+
+Consulter une recette :
+
+- CPU : Consommation de 1.9 mWh.
+- Réseau : Consommation de 2 mWh.
+- Écran : 68 mWh (94%), légèrement supérieure à la consultation de la section.
+
+Les graphiques montrent également l'évolution de l'impact énergétique du backend (CouchDB), où l'utilisation du CPU a augmenté de plus de 242% par rapport au prototype précédent.
+
+**Principales Sources d'Impact**
+
+L'analyse des résultats indique que l'écran reste la principale source d'impact, représentant en moyenne plus de 90% de la consommation énergétique totale. Avec l'augmentation des données, nous constatons que :
+
+- Réseau : L'impact du réseau a considérablement augmenté, en raison des requêtes plus nombreuses et plus volumineuses pour interroger la base CouchDB avec 3000 articles.
+- CPU : La sollicitation du CPU a augmenté également pour traiter l'ensemble des données, notamment du côté du backend.
+
+Ces impacts sont liés principalement au volume élevé de données à gérer et à l'évolution de la complexité des opérations.
