@@ -240,7 +240,7 @@ Scénario : Consulter une recette
   - Écran : 65 mWh (58%).
 
 ![Consulter une recette Proto 3](./benchmarks/consulterRecette_Proto_V3.png)
-__Fig.8__: Consulter une recette
+__Fig.8__: Consulter une recette proto V3
     
 **Différence entre les scénarios : Consulter la section "Sport" vs Consulter une recette**
 
