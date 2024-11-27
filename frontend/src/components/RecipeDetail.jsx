@@ -11,17 +11,7 @@ const RecipeDetail = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:5984/cookify_1/_find', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            selector: {
-              _id: _id,
-            },
-          }),
-        });
+        const response = await fetch(`http://localhost:5984/cookify_1/${_id}`);
 
         if (!response.ok) {
           throw new Error('Erreur lors du chargement des données');
@@ -29,11 +19,7 @@ const RecipeDetail = () => {
 
         const result = await response.json();
 
-        if (result.docs.length > 0) {
-          setData(result.docs[0]);
-        } else {
-          setData(null);
-        }
+        setData(result);  // Store the fetched data
 
         setLoading(false);
       } catch (err) {

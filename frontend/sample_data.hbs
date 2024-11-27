@@ -1,14 +1,24 @@
 {
-"docs": [
-{{#repeat 3000}}
-{
-"_id": "{{@index}}",
-"section": "{{random 'Sport' 'Végé' 'Plaisir'}}",
-"creator": "{{firstName}} {{lastName}}",
-"heading": "{{lorem min=3 max=15}}",
-"ingredient" : "{{lorem min=10 max=50}}",
-"description": "{{#repeat min=1 max=15 comma=false}}{{lorem min=5 max=120}}\n\n{{/repeat}}"
+  "docs": [
+    {{#repeat 3000}}
+    {
+      "_id": "{{@index}}",
+      "title": "{{lorem min=3 max=15}}",
+      "section": "{{random 'Sport' 'Végé' 'Plaisir'}}",
+      "prepTime": "{{integer min=10 max=120}} minutes",
+      "difficulty": "{{random 'Easy' 'Medium' 'Hard'}}",
+      "ingredients": [
+        {{#repeat min=2 max=6}}
+        "{{lorem min=1 max=3}}: {{integer min=10 max=500}} {{random 'g' 'ml' 'cup' 'tbsp' 'tsp'}}"
+        {{/repeat}}
+      ],
+      "steps": [
+        {{#repeat min=2 max=5}}
+        "{{lorem min=5 max=120}}"
+        {{/repeat}}
+      ]
+    }
+    {{/repeat}}
+  ]
 }
-{{/repeat}}
-]
-}
+

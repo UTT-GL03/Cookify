@@ -3,10 +3,11 @@ import { useParams, Link } from 'react-router-dom';
 import '../RecipeListPage.css';
 
 const RecipeListPage = () => {
-    const [recipes, setData] = useState([]);
+    const [recipes, setRecipes] = useState([]);  // Renamed setData to setRecipes
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const { section } = useParams();
+
     useEffect(() => {
         const fetchData = async () => {
           try {
@@ -23,15 +24,15 @@ const RecipeListPage = () => {
                 limit: 25 // Limiter à 25 résultats
               }),
             });            
-    
+
             if (!response.ok) {
               throw new Error('Erreur lors du chargement des données');
             }
-    
+
             const result = await response.json();
             const recipes = result.docs; // Les documents filtrés par section
-    
-            setData(recipes);
+
+            setRecipes(recipes);  // Set the recipes data
             setLoading(false);
           } catch (err) {
             setError(err.message);
@@ -41,6 +42,14 @@ const RecipeListPage = () => {
     
         fetchData();
       }, [section]);
+
+    if (loading) {
+        return <p>Chargement...</p>;
+    }
+
+    if (error) {
+        return <p>Erreur : {error}</p>;
+    }
 
     return (
         <div className="recipe-list-page">
