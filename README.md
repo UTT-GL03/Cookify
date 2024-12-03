@@ -306,3 +306,32 @@ L'analyse des résultats indique que l'écran reste la principale source d'impac
 - CPU : La sollicitation du CPU a augmenté également pour traiter l'ensemble des données, notamment du côté du backend.
 
 Ces impacts sont liés principalement au volume élevé de données à gérer et à l'évolution de la complexité des opérations.
+
+**Passage à l'échelle : Impact de l'augmentation de la quantité de données**
+
+Lors du passage à 3000 recettes, nous avons observé une augmentation initiale de l'impact environnemental (cf. Fig. 10). Cette augmentation s'explique principalement par la charge accrue du réseau et la sollicitation plus importante des ressources, notamment pour transférer un plus grand nombre de données entre le backend et le frontend.
+
+Cependant, après l'application de diverses optimisations, l'impact a été ramené à un niveau plus acceptable, proche de celui observé dans le prototype précédent (cf. Fig.9). Les optimisations ont permis de limiter l'impact malgré la quantité accrue de données.
+
+**Évolution de l'impact environnemental après correction**
+
+La stratégie choisie a eu l'effet escompté : les mesures d'impact (cf. Fig. 9) montrent que son implémentation a permis de contrecarrer l'augmentation de l'impact environnemental causée par le passage de 10 à 3000 recettes.
+
+![Graphique d'optimisation](./benchmarks/graphique_optimisation.png)
+__Fig.9__: Graphique d'optimisation
+
+
+On peut voir qu'en optimisant notre code et en faisant en sorte qu'uniquement 25 recettes ne soient affichéees sur chaque page, nous avons réussi à obtenir des résultats très similaires à quand nous avions qu'une dizaine de données.
+Nous pouvons voir cette diminution sur la figure 10
+
+
+![resultat d'optimisation](./benchmarks/recette_optimise.png)
+__Fig.10__: Comparaison de l'impact de la page des recettes optimisée avec 3000 recettes et non-optimisée.
+
+**Perspectives et Optimisations Futures**
+
+Actuellement notre site permet d'afficher uniquement 25 recettes par section.
+La première optimisation serait, dans un premier temps, d'implémenter un bouton permettant de charger 25 recettes en plus à chaques fois. Cela permet à un utilisateur de consulter un plus grand nombre de recettes sans avoir à recharger les 25 premières.
+
+La deuxième optimisation que l'on pourrait faire serait d'implémenter une fonction de recherche par catégorie. Cela permettrait de charger uniquement la recette en question et donc d'avoir une vraie optimisation dans le chargement de la donnée. 
+

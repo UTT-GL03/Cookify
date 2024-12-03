@@ -3,47 +3,55 @@ import { useParams, Link } from 'react-router-dom';
 import '../RecipeListPage.css';
 
 const RecipeListPage = () => {
-    const [recipes, setRecipes] = useState([]);  // Renamed setData to setRecipes
-    const [loading, setLoading] = useState(true);
+    const [recipes, setRecipes] = useState([]);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const [offset, setOffset] = useState(0); // Pour suivre l'offset (pagination)
     const { section } = useParams();
+    const limit = 25; // Nombre de recettes par page
 
-    useEffect(() => {
-        const fetchData = async () => {
-          try {
-            // Requête vers l'API CouchDB avec une section dynamique
+    const fetchData = async (newOffset) => {
+        try {
+            setLoading(true);
+            // Requête vers l'API CouchDB avec un offset dynamique
             const response = await fetch('http://localhost:5984/cookify_1/_find', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                selector: {
-                  section: section // Utilisation de la section passée en paramètre
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
                 },
-                limit: 25 // Limiter à 25 résultats
-              }),
-            });            
+                body: JSON.stringify({
+                    selector: {
+                        section: section,
+                    },
+                    limit: limit,
+                    skip: newOffset, // Utilisation de l'offset pour paginer
+                }),
+            });
 
             if (!response.ok) {
-              throw new Error('Erreur lors du chargement des données');
+                throw new Error('Erreur lors du chargement des données');
             }
 
             const result = await response.json();
-            const recipes = result.docs; // Les documents filtrés par section
+            const newRecipes = result.docs;
 
-            setRecipes(recipes);  // Set the recipes data
+            setRecipes((prevRecipes) => [...prevRecipes, ...newRecipes]); // Ajouter les nouvelles recettes
             setLoading(false);
-          } catch (err) {
+        } catch (err) {
             setError(err.message);
             setLoading(false);
-          }
-        };
-    
-        fetchData();
-      }, [section]);
+        }
+    };
 
-    if (loading) {
+    useEffect(() => {
+        fetchData(offset); // Charger les premières recettes lors du montage
+    }, [section, offset]);
+
+    const handleLoadMore = () => {
+        setOffset((prevOffset) => prevOffset + limit); // Augmenter l'offset pour la pagination
+    };
+
+    if (loading && recipes.length === 0) {
         return <p>Chargement...</p>;
     }
 
@@ -61,6 +69,12 @@ const RecipeListPage = () => {
                     </Link>
                 ))}
             </div>
+            {loading && <p>Chargement...</p>}
+            {!loading && (
+                <button onClick={handleLoadMore} className="load-more-button">
+                    Charger plus de recettes
+                </button>
+            )}
         </div>
     );
 };
