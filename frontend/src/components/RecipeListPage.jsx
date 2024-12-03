@@ -56,11 +56,9 @@ const RecipeListPage = () => {
             <h1>Recettes pour la section "{section}"</h1>
             <div className="recipes-container">
                 {recipes.map((recipe) => (
-                    <div key={recipe._id} className="recipe-card">
-                        <Link to={`/recipe/${recipe._id}`} className="recipe-link">
-                            <h3>{recipe.title}</h3>
-                        </Link>
-                    </div>
+                    <Link to={`/recipe/${recipe._id}`} className="recipe-card" key={recipe._id}>
+                        <h3 className='recipe-link'>{recipe.title}</h3>
+                    </Link>
                 ))}
             </div>
         </div>

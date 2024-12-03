@@ -13,6 +13,7 @@
 }
 
 .recipe-card {
+    text-decoration: none;
     background-color: #1e1e1e;
     color: #e0e0e0;
     padding: 15px;
