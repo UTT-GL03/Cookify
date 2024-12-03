@@ -320,3 +320,10 @@ La stratégie choisie a eu l'effet escompté : les mesures d'impact (cf. Fig. 9)
 ![Graphique d'optimisation](./benchmarks/graphique_optimisation.png)
 __Fig.9__: Graphique d'optimisation
 
+
+On peut voir qu'en optimisant notre code et en faisant en sorte qu'uniquement 25 recettes ne soient affichéees sur chaque page, nous avons réussi à obtenir des résultats très similaires à quand nous avions qu'une dizaine de données.
+Nous pouvons voir cette diminution sur la figure 10
+
+
+![resultat d'optimisation](./benchmarks/recette_optimise.png)
+__Fig.10__: Comparaison de l'impact de la page des recettes optimisée avec 3000 recettes et non-optimisée.
