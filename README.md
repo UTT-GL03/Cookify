@@ -51,7 +51,7 @@ Nous avons choisi de comparer l'impact des scénarios sur les sites de cuisine p
 Vous pouvez accéder au résultat en cliquant sur le lien suivant (attention, d'une journée à l'autre, on peut observer une certaine variabilité) : [résultats](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/Cookify/refs/heads/main/benchmarks/results.html)
 
 A partir de ces résultats, plusieurs remarques peuvent être pertinente. 
-# Premièrement, on peut identifier les sources d'inmpact:
+**Premièrement, on peut identifier les sources d'inmpact:**
 
 Taille des Pages Web : Des pages volumineuses nécessitent plus de ressources pour le chargement, augmentant ainsi la consommation d'énergie.
 
@@ -61,7 +61,7 @@ Utilisation d'Images Non Optimisées : Des images de grande taille ou mal compre
 
 Scripts et Feuilles de Style Non Minifiés : Des fichiers JavaScript et CSS non optimisés alourdissent les pages et ralentissent leur chargement.
 
-# Deuxièmement, on peut identifier le caractère évitable de ces impacts. 
+**Deuxièmement, on peut identifier le caractère évitable de ces impacts.** 
 
 On remarque notamment que la majorité de ces impacts peuvent être réduits grâce à des pratiques d'écoconception web :
 
@@ -75,7 +75,7 @@ Mise en Cache Efficace : Configurer correctement les en-têtes de cache permet d
 
 En adoptant ces pratiques, il serait théoriquement possible de diminuer l'impact environnemental de ces sites webs.
 
-## Maquette de l'interface et échantillon de données
+**Maquette de l'interface et échantillon de données**
 
 Au vu des différents services comparés, des exigences environnementales exprimées plus haut et des scénarios retenus, nous avons défini pour notre prototype une maquette de l'interface et un échantillon de données réalistes.
 
@@ -105,14 +105,14 @@ Pour cette première version du prototype :
 - l'échantillon de données est encore chargé dans le code de manière statique,
 - les fonctionnalités implémentées ne sont que celles nécessaires pour suivre le scénario prioritaire ("Lire une recette").
 
-## Page de selection des categories
+# Page de selection des categories
 
 La page de sélection des catégories est conçue pour offrir aux utilisateurs un point d'entrée intuitif vers les différentes recettes disponibles en fonction de leurs préférences ou besoins. Dans cette page nous avons fait le choix de ne pas inclure d'image afin de rendre la page plus légère et plus respectueuse de l'environnement.
 
 ![page des categories](./frontend/categories.png)
 __Fig.4__: Page de choix des categories
 
-## Page de présentation des différentes recettes
+# Page de présentation des différentes recettes
 
 Nous avons développé la page d'accueil pour qu'elle affiche l'échantillon de données sous une forme proche de ce que prévoyait la maquette.
 
@@ -132,7 +132,7 @@ Dans l'état actuel du prototype, il est possible d'avoir une première idée de
 
 __Tab.1__: Évaluation de l'impact du prototype de la page d'accueil.
 
-### Pages d'information d'une recettes
+# Pages d'information d'une recettes
 
 Les pages des recettes ont pour HTTP-URI `/{id}`.
 Comme l'écahntillon de données ne comportait pas d'identifiants pour les recettes, nous avons adopté pour l'intant leur titre en tant qu'identifiant.
@@ -191,3 +191,118 @@ Réduite au simple hébergement de données statiques sur un serveur Web, cette 
 
 ![Impact du prototype](./benchmarks/Cookify_homepage_static_hosting.png)
 __Fig.6__ : Consommation de ressources par le serveur Web lors de la consultation de la page des titres dans notre prototype.
+
+## Prototype n°3 : Fonctionnalités pour le scénario prioritaire avec données stockées dans une base de données
+
+Pour la troisième version du prototype, nous avons décidé de migrer le stockage des données vers une base de données dynamique (CouchDB), interrogeable via une API Web. Cette migration présente deux avantages majeurs : une plus grande facilité de mise à jour des recettes et la possibilité de déporter sur le serveur le filtrage des données pertinentes. Cette évolution permet non seulement de rendre la maintenance des données plus efficace, mais aussi de réduire les impacts sur le client (frontend) en évitant des chargements non nécessaires.
+
+**Analyse des résultats GreenFrame**
+
+Nous avons effectué une analyse de l'empreinte carbone de notre prototype n°3 à l'aide de l'outil GreenFrame, qui permet d'évaluer avec précision la consommation énergétique des différentes interactions au sein de notre application. Voici un résumé des résultats obtenus :
+
+**Résultats Généraux**
+
+Consommation de CO₂ estimée 
+
+- 57 mg de CO₂ par minute, ce qui représente environ 29 g pour 1000 exécutions du scénario principal.
+
+Consommation énergétique totale : 
+- 135 mWh
+
+principalement due aux composants suivants :
+- Écran : 92 mWh (soit 68% de la consommation totale).
+- CPU : 30 mWh (22%).
+- Réseau : 10 mWh (7%).
+
+Scénario : Consulter la section "Sport"
+
+- Consommation par minute : 98 mg de CO₂.
+- Par exécution :31 mg de CO₂.
+  
+- Consommation par composant :
+  
+  - CPU : 9 mWh (25% de la consommation totale).
+  - Réseau : 8 mWh (20% de la consommation totale).
+  - Écran : 60 mWh (55% de la consommation totale).
+
+![Consulter section sport Proto 3](./benchmarks/consulterSectionSport_Proto_V3.png)
+__Fig.7__: Consulter section sport Proto 3
+  
+Scénario : Consulter une recette
+
+- Consommation par minute : 95 mg de CO₂.
+- Par exécution : 29 mg de CO₂.
+  
+- Consommation par composant :
+
+  - CPU : 8.5 mWh (23%).
+  - Réseau : 7 mWh (19%).
+  - Écran : 65 mWh (58%).
+
+![Consulter une recette Proto 3](./benchmarks/consulterRecette_Proto_V3.png)
+__Fig.8__: Consulter une recette proto V3
+    
+**Différence entre les scénarios : Consulter la section "Sport" vs Consulter une recette**
+
+Les deux scénarios ont des impacts similaires, mais il existe des différences notables dans la répartition de la consommation énergétique :
+
+- Écran : Dans les deux scénarios, l'écran reste la source principale de consommation énergétique, représentant 55% à 68% de la consommation totale. Toutefois, l'impact lié à l'écran est légèrement plus élevé lors de la consultation d'une recette (65 mWh contre 60 mWh), ce qui peut être dû au temps supplémentaire nécessaire pour lire les détails de la recette.
+
+- CPU et Réseau : La consultation de la section "Sport" a une consommation plus élevée en CPU et en réseau (respectivement 9 mWh et 8 mWh) par rapport à la consultation d'une recette. Cela s'explique par le fait que la page de la section "Sport" nécessite probablement plus de ressources pour charger un grand nombre de recettes en une seule fois, tandis que la page d'une recette individuelle se concentre sur un seul élément.
+
+**Comparaison entre Prototype n°2 et Prototype n°3**
+
+Dans le prototype n°2, les données étaient chargées de manière statique depuis un fichier local. Cela présentait certains avantages, notamment une faible consommation liée aux requêtes réseau, puisque toutes les données étaient déjà disponibles côté client. Toutefois, cette approche rendait la mise à jour des données plus complexe et impliquait un chargement initial potentiellement plus long.
+
+- Consommation réseau : Très faible, car les données étaient locales.
+- Consommation CPU : Le CPU était principalement sollicité lors du chargement initial des données.
+- Flexibilité : La mise à jour des recettes nécessitait une modification manuelle du fichier de données, ce qui limitait la flexibilité du prototype.
+
+Avec le prototype n°3, nous avons migré vers une base de données CouchDB interrogeable via une API. Cette évolution a permis de rendre les données plus dynamiques, facilitant ainsi les mises à jour et le filtrage côté serveur. Toutefois, cette migration a introduit une consommation réseau plus élevée en raison des requêtes API nécessaires pour récupérer les données.
+
+- Consommation réseau : En hausse par rapport au prototype n°2, en raison des requêtes pour récupérer les données depuis la base.
+- Consommation CPU : Une légère augmentation du CPU a été observée, liée au traitement des requêtes et à la gestion des réponses JSON.
+- Flexibilité : Le passage à une base de données dynamique offre une grande flexibilité pour ajouter, supprimer ou modifier des recettes sans intervention côté client.
+
+## Prototype n°4 : Évolution avec une mise à l'échelle des données
+
+Pour cette version du prototype, nous avons effectué une mise à l'échelle des données en passant de 25 recettes à 3000, afin de simuler un usage équivalent à plusieurs mois d'utilisation. L'objectif était d'évaluer l'impact de cette augmentation significative des données sur la consommation énergétique de notre application, notamment pour comprendre comment le backend (CouchDB) et le frontend géraient ce changement de volume.
+
+**Analyse des Résultats GreenFrame**
+
+Les résultats de l'analyse GreenFrame pour le prototype n°4 montrent un impact énergétique significativement plus élevé par rapport au prototype n°3 (fig 9). Le passage à 3000 recettes a permis de mieux comprendre l'effet de la mise à l'échelle des données sur la consommation des différents composants de l'application.
+
+![Consulter une Section](./benchmarks/ConsulterSection_ProtoV4.png)
+__Fig.9__: Consulter une Section Proto V4
+
+
+Voici un résumé des résultats :
+
+**Comparaison entre Prototype n°3 et Prototype n°4**
+
+Prototype n°3 : Les données étaient stockées dans CouchDB, mais en quantités limitées à 25 recettes. La consommation énergétique était relativement faible, avec une consommation globale estimée à 64 mg eq. CO₂ par minute (144 mWh).
+
+Prototype n°4 : Avec 3000 recettes, l'impact global est passé à 295 mg eq. CO₂ par minute, soit une augmentation considérable de la consommation, en particulier pour le backend qui gère les requêtes de consultation de la base de données. Voici les détails :
+
+Consulter la section "Sport" :
+
+- CPU : Consommation de 2.1 mWh (3% du total).
+- Réseau : Consommation élevée à 3.2 mWh, soit 4% de l'énergie totale.
+- Écran : Toujours la composante majeure avec 67 mWh (92%).
+
+Consulter une recette :
+
+- CPU : Consommation de 1.9 mWh.
+- Réseau : Consommation de 2 mWh.
+- Écran : 68 mWh (94%), légèrement supérieure à la consultation de la section.
+
+Les graphiques montrent également l'évolution de l'impact énergétique du backend (CouchDB), où l'utilisation du CPU a augmenté significativement par rapport au prototype précédent.
+
+**Principales Sources d'Impact**
+
+L'analyse des résultats indique que l'écran reste la principale source d'impact, représentant en moyenne plus de 90% de la consommation énergétique totale. Avec l'augmentation des données, nous constatons que :
+
+- Réseau : L'impact du réseau a considérablement augmenté, en raison des requêtes plus nombreuses et plus volumineuses pour interroger la base CouchDB avec 3000 articles.
+- CPU : La sollicitation du CPU a augmenté également pour traiter l'ensemble des données, notamment du côté du backend.
+
+Ces impacts sont liés principalement au volume élevé de données à gérer et à l'évolution de la complexité des opérations.

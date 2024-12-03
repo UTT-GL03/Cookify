@@ -1,0 +1,10 @@
+{
+  "index": {
+    "fields": [
+      "section"
+    ]
+  },
+  "name": "section_index",
+  "type": "json"
+}
+
