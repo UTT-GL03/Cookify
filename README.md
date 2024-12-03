@@ -327,3 +327,11 @@ Nous pouvons voir cette diminution sur la figure 10
 
 ![resultat d'optimisation](./benchmarks/recette_optimise.png)
 __Fig.10__: Comparaison de l'impact de la page des recettes optimisée avec 3000 recettes et non-optimisée.
+
+**Perspectives et Optimisations Futures**
+
+Actuellement notre site permet d'afficher uniquement 25 recettes par section.
+La première optimisation serait, dans un premier temps, d'implémenter un bouton permettant de charger 25 recettes en plus à chaques fois. Cela permet à un utilisateur de consulter un plus grand nombre de recettes sans avoir à recharger les 25 premières.
+
+La deuxième optimisation que l'on pourrait faire serait d'implémenter une fonction de recherche par catégorie. Cela permettrait de charger uniquement la recette en question et donc d'avoir une vraie optimisation dans le chargement de la donnée. 
+
