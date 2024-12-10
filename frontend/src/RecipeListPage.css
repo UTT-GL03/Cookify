@@ -59,3 +59,28 @@
 .load-more-button:focus {
     outline: none;
 }
+
+.search-input {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px 15px;
+    border: 2px solid #1e1e1e;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #e0e0e0;
+    background-color: #2c2c2c;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #ff8c00;
+    box-shadow: 0 4px 12px rgba(255, 140, 0, 0.6);
+}
+
+.search-input::placeholder {
+    color: #b0b0b0;
+    font-style: italic;
+}
