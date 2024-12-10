@@ -4,16 +4,17 @@ import '../RecipeListPage.css';
 
 const RecipeListPage = () => {
     const [recipes, setRecipes] = useState([]);
+    const [filteredRecipes, setFilteredRecipes] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
-    const [offset, setOffset] = useState(0); // Pour suivre l'offset (pagination)
+    const [offset, setOffset] = useState(0);
     const { section } = useParams();
-    const limit = 25; // Nombre de recettes par page
+    const limit = 25;
 
     const fetchData = async (newOffset) => {
         try {
             setLoading(true);
-            // Requête vers l'API CouchDB avec un offset dynamique
             const response = await fetch('http://localhost:5984/cookify_1/_find', {
                 method: 'POST',
                 headers: {
@@ -24,7 +25,7 @@ const RecipeListPage = () => {
                         section: section,
                     },
                     limit: limit,
-                    skip: newOffset, // Utilisation de l'offset pour paginer
+                    skip: newOffset,
                 }),
             });
 
@@ -35,7 +36,7 @@ const RecipeListPage = () => {
             const result = await response.json();
             const newRecipes = result.docs;
 
-            setRecipes((prevRecipes) => [...prevRecipes, ...newRecipes]); // Ajouter les nouvelles recettes
+            setRecipes((prevRecipes) => [...prevRecipes, ...newRecipes]);
             setLoading(false);
         } catch (err) {
             setError(err.message);
@@ -44,11 +45,24 @@ const RecipeListPage = () => {
     };
 
     useEffect(() => {
-        fetchData(offset); // Charger les premières recettes lors du montage
+        fetchData(offset);
     }, [section, offset]);
 
+    useEffect(() => {
+        // Filtrer les recettes en fonction du terme de recherche
+        const lowercasedSearchTerm = searchTerm.toLowerCase();
+        const filtered = recipes.filter((recipe) =>
+            recipe.title.toLowerCase().includes(lowercasedSearchTerm)
+        );
+        setFilteredRecipes(filtered);
+    }, [searchTerm, recipes]);
+
+    const handleSearchChange = (event) => {
+        setSearchTerm(event.target.value);
+    };
+
     const handleLoadMore = () => {
-        setOffset((prevOffset) => prevOffset + limit); // Augmenter l'offset pour la pagination
+        setOffset((prevOffset) => prevOffset + limit);
     };
 
     if (loading && recipes.length === 0) {
@@ -62,10 +76,17 @@ const RecipeListPage = () => {
     return (
         <div className="recipe-list-page">
             <h1>Recettes pour la section "{section}"</h1>
+            <input
+                type="text"
+                placeholder="Rechercher une recette..."
+                value={searchTerm}
+                onChange={handleSearchChange}
+                className="search-input"
+            />
             <div className="recipes-container">
-                {recipes.map((recipe) => (
+                {filteredRecipes.map((recipe) => (
                     <Link to={`/recipe/${recipe._id}`} className="recipe-card" key={recipe._id}>
-                        <h3 className='recipe-link'>{recipe.title}</h3>
+                        <h3 className="recipe-link">{recipe.title}</h3>
                     </Link>
                 ))}
             </div>
