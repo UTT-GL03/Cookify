@@ -5,6 +5,8 @@ scenarios:
     name: Consulter la section Sport
   - path: ./benchmarks/scenario2.js
     name: Consulter une recette
+  - name: "Scenario: Recherche de recettes"
+    path: "./benchmarks/scenario_search.js"
 containers:
   - cookify-static_hosting-1
   - cookify-backend-1
