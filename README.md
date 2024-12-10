@@ -333,4 +333,7 @@ __Fig.10__: Comparaison de l'impact de la page des recettes optimisée avec 3000
 Actuellement notre site permet d'afficher uniquement 25 recettes par section.
 La première optimisation serait, dans un premier temps, d'implémenter un bouton permettant de charger 25 recettes en plus à chaques fois. Cela permet à un utilisateur de consulter un plus grand nombre de recettes sans avoir à recharger les 25 premières.
 
-La deuxième optimisation que l'on pourrait faire serait d'implémenter une fonction de recherche par catégorie. Cela permettrait de charger uniquement la recette en question et donc d'avoir une vraie optimisation dans le chargement de la donnée.
+La deuxième optimisation envisagée consiste à implémenter une fonction de recherche au sein d'une catégorie. Pour cela, nous proposons d'ajouter une barre de recherche (texte box) permettant à l'utilisateur de rechercher une recette spécifique parmi les 25 recettes actuellement affichées dans la section. Si la recette recherchée ne se trouve pas parmi les 25 premières, l'utilisateur peut cliquer sur un bouton pour charger 25 recettes supplémentaires.
+Cette approche permet de limiter la quantité de données chargées en mémoire et évite d'effectuer une recherche sur l'ensemble de la base de données, ce qui entraînerait une consommation énergétique nettement plus élevée.
+
+Ces deux optimisations sont essentielles pour notre site, car elles allient l'objectif de réduire les émissions liées à l'utilisation de l'application à la nécessité de maintenir une expérience utilisateur intuitive et agréable.
