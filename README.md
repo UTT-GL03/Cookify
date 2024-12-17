@@ -370,6 +370,44 @@ __Fig.12__: Chercher les recettes qui ont le motif "Ultrices" dans leur titre
 
 Nous remarquons bien que le nombre de requêtes n'a pas changé et que l'eco-index est très proche. Encore une fois, nous gardons une cohérence dans le score qui reste de A.
 
+## Conclusion
+
+Ce projet de plateforme **Cookify** a permis d'explorer plusieurs axes d'optimisation pour proposer une solution numérique plus respectueuse de l'environnement tout en restant intuitive pour l'utilisateur.
+
+---
+
+### Objectifs Atteints
+
+- **Accessibilité des Recettes** : Grâce à une interface claire et bien organisée, les utilisateurs peuvent naviguer facilement entre les sections *(Végé, Sport, Plaisir)* et consulter les recettes détaillées. Les maquettes mises en place *(mockups)* ont été fidèlement reproduites et améliorées pour offrir une expérience utilisateur fluide.
+
+- **Optimisation du Chargement des Données** : Les recettes sont chargées par sections, limitant ainsi le transfert de données. La **pagination** permet de récupérer les recettes par lots de 25, évitant les requêtes inutiles sur la base de données.
+
+- **Fonctionnalité de Recherche Frugale** : Une recherche locale a été implémentée pour permettre aux utilisateurs de filtrer les recettes déjà affichées, réduisant ainsi les requêtes réseau et optimisant la consommation de ressources.
+
+- **Adoption d'une Base de Données Dynamique** : L'intégration de **CouchDB** permet d'interroger la base via une **API web**. Cette approche facilite la mise à jour des données sans altérer la performance de l'application.
+
+---
+
+### Optimisations Écologiques
+
+L'analyse de l'impact environnemental réalisée avec **GreenFrame** a révélé plusieurs points clés :
+
+1. Le passage d'une version **statique** à une version **dynamique** (via API) a permis de déporter le filtrage des données sur le serveur.
+2. L'ajout de la recherche par **pagination** et par **lots** a permis de limiter les échanges réseau, ce qui a un impact direct sur la réduction de la consommation énergétique.
+3. Malgré une légère augmentation de l'empreinte réseau lors des scénarios à grande échelle *(passage de 25 recettes à 3000)*, l'optimisation des chargements a maintenu une **performance acceptable**.
+
+---
+
+### Perspectives
+
+Pour aller plus loin dans l'optimisation de **Cookify**, plusieurs axes d'amélioration sont envisagés :
+
+- **Archivage Intelligent** : Introduire une option pour accéder aux anciennes recettes tout en minimisant les requêtes réseau.
+- **Cache Avancé** : Mettre en place un système de mise en cache pour réduire la consommation lors de requêtes récurrentes.
+- **Optimisation Frontend** : Réduire la consommation des écrans en améliorant le rendu des pages et en limitant le temps d'affichage.
+- **Analyse Continue** : Intégrer un suivi régulier avec **GreenFrame** afin de mesurer et optimiser l'empreinte écologique à chaque mise à jour du projet.
+
+
 
 
 
