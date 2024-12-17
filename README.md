@@ -337,3 +337,6 @@ La deuxième optimisation envisagée consiste à implémenter une fonction de re
 Cette approche permet de limiter la quantité de données chargées en mémoire et évite d'effectuer une recherche sur l'ensemble de la base de données, ce qui entraînerait une consommation énergétique nettement plus élevée.
 
 Ces deux optimisations sont essentielles pour notre site, car elles allient l'objectif de réduire les émissions liées à l'utilisation de l'application à la nécessité de maintenir une expérience utilisateur intuitive et agréable.
+
+**Itérations implémentées**
+
