@@ -374,8 +374,6 @@ Nous remarquons bien que le nombre de requêtes n'a pas changé et que l'eco-ind
 
 Ce projet de plateforme **Cookify** a permis d'explorer plusieurs axes d'optimisation pour proposer une solution numérique plus respectueuse de l'environnement tout en restant intuitive pour l'utilisateur.
 
----
-
 ### Objectifs Atteints
 
 - **Accessibilité des Recettes** : Grâce à une interface claire et bien organisée, les utilisateurs peuvent naviguer facilement entre les sections *(Végé, Sport, Plaisir)* et consulter les recettes détaillées. Les maquettes mises en place *(mockups)* ont été fidèlement reproduites et améliorées pour offrir une expérience utilisateur fluide.
@@ -386,8 +384,6 @@ Ce projet de plateforme **Cookify** a permis d'explorer plusieurs axes d'optimis
 
 - **Adoption d'une Base de Données Dynamique** : L'intégration de **CouchDB** permet d'interroger la base via une **API web**. Cette approche facilite la mise à jour des données sans altérer la performance de l'application.
 
----
-
 ### Optimisations Écologiques
 
 L'analyse de l'impact environnemental réalisée avec **GreenFrame** a révélé plusieurs points clés :
@@ -395,8 +391,6 @@ L'analyse de l'impact environnemental réalisée avec **GreenFrame** a révélé
 1. Le passage d'une version **statique** à une version **dynamique** (via API) a permis de déporter le filtrage des données sur le serveur.
 2. L'ajout de la recherche par **pagination** et par **lots** a permis de limiter les échanges réseau, ce qui a un impact direct sur la réduction de la consommation énergétique.
 3. Malgré une légère augmentation de l'empreinte réseau lors des scénarios à grande échelle *(passage de 25 recettes à 3000)*, l'optimisation des chargements a maintenu une **performance acceptable**.
-
----
 
 ### Perspectives
 
