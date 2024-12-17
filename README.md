@@ -339,3 +339,37 @@ Ces deux optimisations sont essentielles pour notre site, car elles allient l'ob
 
 **Itérations implémentées**
 
+Nous avons fini d'implémenter les deux itérations que nous avions choisis
+- Le bouton permettant de charger 25 recettes de plus,
+- La barre de recherche qui trouve une recette dans celles actuellement affichées et dans les nouvelles si on appuie sur le bouton chargeant les 25 recettes supplémentaires. 
+
+Pour notre analyse de ces deux fonctionnalités, nous avons dû prendre GreenIt. En effet, GreenFrame ne nous permettant pas de cliquer sur un bouton et de faire un prompt dans notre barre de recherche, nous nous sommes adaptés et avons choisi une autre solution.
+
+Avant de vous montrer les résultats obtenus avec GreenIt, voici à quoi on s'attend: 
+- Pour le chargement des 25 recettes supplémentaires, on s'attend à avoir une seule requête en plus et non le nouveau chargement des 25 précédentes plus les 25 nouvelles
+- Pour la barre de recherche, on s'attend à ne pas avoir de requêtes supplémentaires car elle recherche uniquement sur les données qui ont déjà été fetch. 
+
+Voici les résultats avec GreenIt pour la première itération (bouton affichant les 25 recettes supplémentaires) :
+
+![Consulter la Section Sport affichant les 25 recettes](./benchmarks/ConsulterSectionSport.png)
+__Fig.11__: Consulter la Section Sport affichant les 25 recettes sans appuyer sur le bouton affichant les 25 suivantes
+
+![Appuie sur le bouton](./benchmarks/boutonChargerRecette.png)
+__Fig.12__: Appuie sur le bouton affichant les 25 recettes suivantes
+
+On remarque bien qu'une seule requête supplémentaires a été effectuée. Cela est donc en accord avec nos attentes. 
+De plus, les scores d'eco-index reste cohérent et obtienent une note de A.
+
+Ensuite pour l'itération 2 (barre de recherche), pour la comparaison, nous avons juste besoin de reprendre la consommation lorsque l'on clique sur la section sport (cf. Fig.11). 
+Voici les résultats de la deuxième itération avec GreenIt (Barre de recherche):
+
+![Barre de recherche](./benchmarks/chercherRecettes.png)
+__Fig.12__: Chercher les recettes qui ont le motif "Ultrices" dans leur titre
+
+Nous remarquons bien que le nombre de requêtes n'a pas changé et que l'eco-index est très proche. Encore une fois, nous gardons une cohérence dans le score qui reste de A.
+
+
+
+
+
+
