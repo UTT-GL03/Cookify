@@ -247,13 +247,13 @@ Le passage du prototype n°2 au prototype n°3 reflète une évolution significa
 
 Cette transition permet non seulement de réduire significativement l’impact environnemental du prototype, mais elle offre également une meilleure capacité d’adaptation aux besoins des utilisateurs. Cela témoigne de l’importance d’une architecture pensée pour être efficace, évolutive et durable.
 
-## Prototype n°4 : Évolution avec une mise à l'échelle des données
+## Évolution avec une mise à l'échelle des données (25 à 3000)
 
 Pour cette version du prototype, nous avons effectué une mise à l'échelle des données en passant de 25 recettes à 3000, afin de simuler un usage équivalent à plusieurs mois d'utilisation. L'objectif était d'évaluer l'impact de cette augmentation significative des données sur la consommation énergétique de notre application, notamment pour comprendre comment le backend (CouchDB) et le frontend géraient ce changement de volume.
 
 **Analyse des Résultats GreenFrame**
 
-Les résultats de l'analyse GreenFrame pour le prototype n°4 montrent un impact énergétique significativement plus élevé par rapport au prototype n°3 (fig 9). Le passage à 3000 recettes a permis de mieux comprendre l'effet de la mise à l'échelle des données sur la consommation des différents composants de l'application.
+Les résultats de l'analyse GreenFrame montrent un impact énergétique significativement plus élevé par rapport à lorsque l'on avait 25 recettes.Le passage à 3000 recettes a permis de mieux comprendre l'effet de la mise à l'échelle des données sur la consommation des différents composants de l'application.
 
 ![Consulter une Section](./benchmarks/ConsulterSection_ProtoV4.png)
 __Fig.9__: Consulter une Section Proto V4
@@ -261,11 +261,11 @@ __Fig.9__: Consulter une Section Proto V4
 
 Voici un résumé des résultats :
 
-**Comparaison entre Prototype n°3 et Prototype n°4**
+**Comparaison des fonctionnements entre 25 recettes et 3000 recettes**
 
-Prototype n°3 : Les données étaient stockées dans CouchDB, mais en quantités limitées à 25 recettes. La consommation énergétique était relativement faible, avec une consommation globale estimée à 64 mg eq. CO₂ par minute (144 mWh).
+25 recettes : Les données étaient stockées dans CouchDB, mais en quantités limitées à 25 recettes. La consommation énergétique était relativement faible, avec une consommation globale estimée à 64 mg eq. CO₂ par minute (144 mWh).
 
-Prototype n°4 : Avec 3000 recettes, l'impact global est passé à 295 mg eq. CO₂ par minute, soit une augmentation considérable de la consommation, en particulier pour le backend qui gère les requêtes de consultation de la base de données. Voici les détails :
+3000 recettes : Avec 3000 recettes, l'impact global est passé à 295 mg eq. CO₂ par minute, soit une augmentation considérable de la consommation, en particulier pour le backend qui gère les requêtes de consultation de la base de données. Voici les détails :
 
 Consulter la section "Sport" :
 
