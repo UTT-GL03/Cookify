@@ -219,19 +219,33 @@ Les deux scénarios ont des impacts similaires, mais il existe des différences 
 
 - CPU et Réseau : La consultation de la section "Sport" a une consommation plus élevée en CPU et en réseau par rapport à la consultation d'une recette. Cela s'explique par le fait que la page de la section "Sport" nécessite probablement plus de ressources pour charger un grand nombre de recettes en une seule fois, tandis que la page d'une recette individuelle se concentre sur un seul élément.
 
-**Comparaison entre Prototype n°2 et Prototype n°3**
+ ### Comparaison entre Prototype n°2 et Prototype n°3
 
-Dans le prototype n°2, les données étaient chargées de manière statique depuis un fichier local. Cela présentait certains avantages, notamment une faible consommation liée aux requêtes réseau, puisque toutes les données étaient déjà disponibles côté client. Toutefois, cette approche rendait la mise à jour des données plus complexe et impliquait un chargement initial potentiellement plus long.
+Dans le prototype n°2, les données étaient déjà chargées dynamiquement depuis un serveur distant via des requêtes HTTP (`fetch`), permettant de réduire la taille initiale des données transmises au navigateur. Cela introduisait une requête supplémentaire par page mais assurait que seules les données nécessaires étaient récupérées. Le passage au prototype n°3 a marqué une évolution notable avec l'intégration d'une base de données dynamique (CouchDB) interrogeable via une API Web, apportant des avantages en termes de flexibilité et d'efficacité.
 
-- Consommation réseau : Très faible, car les données étaient locales.
-- Consommation CPU : Le CPU était principalement sollicité lors du chargement initial des données.
-- Flexibilité : La mise à jour des recettes nécessitait une modification manuelle du fichier de données, ce qui limitait la flexibilité du prototype.
+#### **Consommation réseau** :
+- **Prototype n°2** : Les données étaient récupérées dynamiquement via des requêtes HTTP, entraînant une consommation réseau d’environ **48 mWh** par page (cf. Fig. X).
+- **Prototype n°3** : Grâce à CouchDB, seules les données filtrées sont transmises, réduisant ainsi la consommation réseau à environ **2 mWh** par requête (cf. Fig. Y).
+- **Différence observée** : La consommation réseau a diminué de **46 mWh**, soit une réduction de **95,8 %**.
 
-Avec le prototype n°3, nous avons migré vers une base de données CouchDB interrogeable via une API. Cette évolution a permis de rendre les données plus dynamiques, facilitant ainsi les mises à jour et le filtrage côté serveur. Toutefois, cette migration a introduit une consommation réseau plus élevée en raison des requêtes API nécessaires pour récupérer les données.
+#### **Consommation CPU** :
+- **Prototype n°2** : Le CPU était sollicité principalement par le navigateur pour traiter les données reçues, avec une consommation atteignant **69 mWh** (cf. Fig. X).
+- **Prototype n°3** : Une partie du traitement est désormais déportée sur le serveur, permettant de réduire la consommation CPU côté client à environ **2 mWh** (cf. Fig. Y).
+- **Différence observée** : La consommation CPU côté client a été réduite de **67 mWh**, soit une baisse de **97,1 %**.
 
-- Consommation réseau : En hausse par rapport au prototype n°2, en raison des requêtes pour récupérer les données depuis la base.
-- Consommation CPU : Une légère augmentation du CPU a été observée, liée au traitement des requêtes et à la gestion des réponses JSON.
-- Flexibilité : Le passage à une base de données dynamique offre une grande flexibilité pour ajouter, supprimer ou modifier des recettes sans intervention côté client.
+#### **Flexibilité** :
+- **Prototype n°2** : Toute modification des données nécessitait une mise à jour des fichiers JSON côté serveur.
+- **Prototype n°3** : La base de données dynamique permet une flexibilité accrue pour ajouter, supprimer ou modifier des recettes en temps réel, sans intervention manuelle.
+- **Amélioration observée** : La transition vers CouchDB supprime complètement les mises à jour manuelles, rendant l’ajout ou la modification des données entièrement automatisé.
+
+### Analyse globale
+
+Le passage du prototype n°2 au prototype n°3 reflète une évolution significative vers une architecture plus performante et éco-responsable :
+- **Consommation réseau** : Réduction de **95,8 %** grâce à la transmission de données filtrées côté serveur.
+- **Consommation CPU** : Réduction de **97,1 %** sur le client grâce à la déportation du traitement vers le serveur.
+- **Flexibilité accrue** : Gestion dynamique des données, éliminant les limitations des fichiers JSON statiques.
+
+Cette transition permet non seulement de réduire significativement l’impact environnemental du prototype, mais elle offre également une meilleure capacité d’adaptation aux besoins des utilisateurs. Cela témoigne de l’importance d’une architecture pensée pour être efficace, évolutive et durable.
 
 ## Prototype n°4 : Évolution avec une mise à l'échelle des données
 
