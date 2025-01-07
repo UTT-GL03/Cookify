@@ -49,7 +49,7 @@ Nous avons choisi de comparer l'impact des scénarios sur les sites de cuisine p
 - Cuisine AZ
 - PtitChef
 
-Vous pouvez accéder au résultat en cliquant sur le lien suivant (attention, d'une journée à l'autre, on peut observer une certaine variabilité) : [résultats](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/Cookify/refs/heads/main/benchmarks/results.html)
+Vous pouvez accéder au résultat en cliquant sur le lien suivant (attention, d'une journée à l'autre, on peut observer une certaine variabilité) : [résultats](https://htmlpreview.github.io/?https://raw.githubusercontent.com/UTT-GL03/Cookify/refs/heads/main/benchmarks/results.html).
 
 A partir de ces résultats, plusieurs remarques peuvent être pertinente. 
 **Premièrement, on peut identifier les sources d'inmpact:**
@@ -75,6 +75,8 @@ Réduction des Requêtes HTTP : Combiner les fichiers CSS et JavaScript, utilise
 Mise en Cache Efficace : Configurer correctement les en-têtes de cache permet de réduire les requêtes répétées et d'accélérer le chargement des pages.
 
 En adoptant ces pratiques, il serait théoriquement possible de diminuer l'impact environnemental de ces sites webs.
+
+Ce qui est surprenant dans ces mesures, c'est qu'elles révèlent des impacts parfois sous-estimés ou inattendus liés à des éléments que l'on considère comme "standards" dans le développement web. Par exemple : l'impact des images non optimisées, le nombre élevé de requêtes HTTP.
 
 **Maquette de l'interface et échantillon de données**
 
