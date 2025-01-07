@@ -166,7 +166,7 @@ Ce comportement, plus réaliste, n'a pour effet qu'une requête supplémentaire 
 
 Concernant l'évaluation de l'impact environemental du scénario, par rapport au tableau précédent (cf. Tab.2), à l'exception du nombre de requêtes qui est incrémenté de 1, les résultats sont strictement identiques. D'ailleurs, à partir de cette version, et à moins de changements profonds, l'EcoIndex ne devrait plus évoluer de manière significative. Nous utiliserons désormais un autre logiciel, GreenFrame, qui évalue non pas l'impact "environné" de la consultation (incorporant une participation au cycle de vie du terminal) mais celui de la consultation proprement dite (cf. Tab.3) et de manière beaucoup plus fiable à partir des statistiques d'utilisation des ressources physiques (CPU, mémoire, réseau, disque).
 
-| | Impact de la consultation des recettes | Impact de la consultation d'une recette
+| | Impact de la consultation de la liste recettes | Impact de la consultation d'une recette
 |--------------|----:|---------:
 | Papilles et pupilles  | 72     | 92
 | Cuisine Actuelle   | 65     | 92
