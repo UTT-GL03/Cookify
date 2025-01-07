@@ -98,7 +98,7 @@ __Fig.2__: Maquette de la liste de recette après avoir cliqué sur un programme
 __Fig.3__: Maquette d'une recette
 
 Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec [`dummy-json`](https://dummyjson.com)).
-Bien que fictives, ces données correspondent à la structure des services concurrents : 10 recettes comportant un titre, son programme, son temps de préparation, sa difficulté, ses ingrédients et ses étapes(voir [modèle de données](./frontend/sample_data.hbs)). 
+Bien que fictives, ces données correspondent à la structure des services concurrents : 10 recettes comportant un titre, son programme, son temps de préparation, sa difficulté, ses ingrédients et ses étapes (voir [modèle de données](https://github.com/UTT-GL03/Cookify/blob/1e1bd834d156f25a76c2509185e24a9344645ad6/frontend/sample_data.hbs)). 
 Dans un objectif de sobriété environnementale, les photos ont été limités au maximum et le nombres de recettes limités à 30 par programme.
 
 # Prototype n°1 : Fonctionnalités pour le scénario prioritaire avec données statiques
