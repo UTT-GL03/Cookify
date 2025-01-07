@@ -130,8 +130,8 @@ Dans l'état actuel du prototype, il est possible d'avoir une première idée de
 
 |   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
 |---|--------:|------------:|--------------:|---------:|---------------------:
-| Mode "développement"  | 85.20 A🟢 |  1.30 | 28 | 23 | 1523
-| Mode "pré-production" | 95.56 A🟢 | 1,09 | 23 | 5 | 59
+| Mode "développement"  | 85 A🟢 |  1.3 | 28 | 23 | 1523
+| Mode "pré-production" | 96 A🟢 | 1,1 | 23 | 5 | 59
 
 __Tab.1__: Évaluation de l'impact du prototype de la page d'accueil.
 
