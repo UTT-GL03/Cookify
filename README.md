@@ -23,7 +23,7 @@ Ce prototype vise cependant à inspirer une approche plus éco-responsable des s
 
 En présentant ces différents apports, les plateformes culinaires numériques peuvent être perçues comme une évolution utile, à condition d’intégrer une véritable réflexion sur leur impact environnemental et de chercher constamment à l'optimiser.
 # Scénarios d'usage et impacts
-Nous partons de l'hypothèse que les utilisateurs visitent les sites de recettes principalement dans le but de découvrir de nouvelles idées de repas, de trouver des recettes spécifiques, ou de s'inspirer pour leur prochain repas. Ces visites peuvent se produire à tout moment de la journée, notamment lors de pauses ou pendant la préparation des repas.
+Nous partons de l'hypothèse que les utilisateurs visitent les sites de recettes principalement dans le but de découvrir de nouvelles idées de repas, de trouver des recettes spécifiques, ou de s'inspirer pour leur prochain repas. Ces visites peuvent se produire à tout moment de la journée, notamment lors de pauses ou pendant la préparation des repas. Le retour à la page d'accueil après la consultation d'une recette reflète un comportement naturel d'exploration : les utilisateurs souhaitent explorer d'autres options, comparer plusieurs idées, ou poursuivre leur recherche jusqu'à trouver la recette qui correspond parfaitement à leurs besoins ou à leurs envies. Cela leur permet également de maintenir une navigation fluide, en restant dans un cadre familier où d'autres suggestions leur sont proposées.
 <!-- # Scénario 1 : "Consulter la liste recettes de la page d'accueil"
 1. L’utilisateur se rend sur le site internet
 2. L’utilisateur accède à la page d'accueil où sont affichés un certains nombre de recette
