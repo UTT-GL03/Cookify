@@ -205,42 +205,8 @@ Nous avons effectué une analyse de l'empreinte carbone de notre prototype n°3 
 
 **Résultats Généraux**
 
-Consommation de CO₂ estimée 
-
-- 57 mg de CO₂ par minute, ce qui représente environ 29 g pour 1000 exécutions du scénario principal.
-
-Consommation énergétique totale : 
-- 135 mWh
-
-principalement due aux composants suivants :
-- Écran : 92 mWh (soit 68% de la consommation totale).
-- CPU : 30 mWh (22%).
-- Réseau : 10 mWh (7%).
-
-Scénario : Consulter la section "Sport"
-
-- Consommation par minute : 98 mg de CO₂.
-- Par exécution :31 mg de CO₂.
-  
-- Consommation par composant :
-  
-  - CPU : 9 mWh (25% de la consommation totale).
-  - Réseau : 8 mWh (20% de la consommation totale).
-  - Écran : 60 mWh (55% de la consommation totale).
-
 ![Consulter section sport Proto 3](./benchmarks/consulterSectionSport_Proto_V3.png)
 __Fig.7__: Consulter section sport Proto 3
-  
-Scénario : Consulter une recette
-
-- Consommation par minute : 95 mg de CO₂.
-- Par exécution : 29 mg de CO₂.
-  
-- Consommation par composant :
-
-  - CPU : 8.5 mWh (23%).
-  - Réseau : 7 mWh (19%).
-  - Écran : 65 mWh (58%).
 
 ![Consulter une recette Proto 3](./benchmarks/consulterRecette_Proto_V3.png)
 __Fig.8__: Consulter une recette proto V3
@@ -251,7 +217,7 @@ Les deux scénarios ont des impacts similaires, mais il existe des différences 
 
 - Écran : Dans les deux scénarios, l'écran reste la source principale de consommation énergétique, représentant 55% à 68% de la consommation totale. Toutefois, l'impact lié à l'écran est légèrement plus élevé lors de la consultation d'une recette (65 mWh contre 60 mWh), ce qui peut être dû au temps supplémentaire nécessaire pour lire les détails de la recette.
 
-- CPU et Réseau : La consultation de la section "Sport" a une consommation plus élevée en CPU et en réseau (respectivement 9 mWh et 8 mWh) par rapport à la consultation d'une recette. Cela s'explique par le fait que la page de la section "Sport" nécessite probablement plus de ressources pour charger un grand nombre de recettes en une seule fois, tandis que la page d'une recette individuelle se concentre sur un seul élément.
+- CPU et Réseau : La consultation de la section "Sport" a une consommation plus élevée en CPU et en réseau par rapport à la consultation d'une recette. Cela s'explique par le fait que la page de la section "Sport" nécessite probablement plus de ressources pour charger un grand nombre de recettes en une seule fois, tandis que la page d'une recette individuelle se concentre sur un seul élément.
 
 **Comparaison entre Prototype n°2 et Prototype n°3**
 
