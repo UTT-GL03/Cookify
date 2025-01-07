@@ -135,7 +135,7 @@ Dans l'état actuel du prototype, il est possible d'avoir une première idée de
 
 __Tab.1__: Évaluation de l'impact du prototype de la page d'accueil.
 
-# Pages d'information d'une recettes
+# Pages d'information sur une recette
 
 Les pages des recettes ont pour HTTP-URI `/{id}`.
 Comme l'échantillon de données ne comportait pas d'identifiants pour les recettes, nous avons adopté pour l'intant leur titre en tant qu'identifiant.
