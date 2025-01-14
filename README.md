@@ -206,10 +206,10 @@ Nous avons effectué une analyse de l'empreinte carbone de notre prototype n°3 
 **Résultats Généraux**
 
 ![Consulter section sport Proto 3](./benchmarks/consulterSectionSport_Proto_V3.png)
-__Fig.7__: Consulter section sport Proto 3
+__Fig.7__: Consulter section sport Prototype 3
 
 ![Consulter une recette Proto 3](./benchmarks/consulterRecette_Proto_V3.png)
-__Fig.8__: Consulter une recette proto V3
+__Fig.8__: Consulter une recette prototype V3
     
 **Différence entre les scénarios : Consulter la section "Sport" vs Consulter une recette**
 
@@ -256,6 +256,7 @@ Pour cette version du prototype, nous avons effectué une mise à l'échelle des
 Les résultats de l'analyse GreenFrame montrent un impact énergétique significativement plus élevé par rapport à lorsque l'on avait 25 recettes.Le passage à 3000 recettes a permis de mieux comprendre l'effet de la mise à l'échelle des données sur la consommation des différents composants de l'application.
 
 ![Consulter une Section](./benchmarks/ConsulterSection_ProtoV4.png)
+
 __Fig.9__: Consulter une Section Prototype V4
 
 
@@ -301,6 +302,7 @@ Cependant, après l'application de diverses optimisations, l'impact a été rame
 La stratégie choisie a eu l'effet escompté : les mesures d'impact (cf. Fig. 9) montrent que son implémentation a permis de contrecarrer l'augmentation de l'impact environnemental causée par le passage de 10 à 3000 recettes.
 
 ![Graphique d'optimisation](./benchmarks/graphique_optimisation.png)
+
 __Fig.10__: Graphique d'optimisation
 
 
@@ -309,6 +311,7 @@ Nous pouvons voir cette diminution sur la figure 10.
 
 
 ![resultat d'optimisation](./benchmarks/recette_optimise.png)
+
 __Fig.11__: Comparaison de l'impact de la page des recettes optimisée avec 3000 recettes et non-optimisée.
 
 **Perspectives et Optimisations Futures**
@@ -336,9 +339,11 @@ Avant de vous montrer les résultats obtenus avec GreenIt, voici à quoi on s'at
 Voici les résultats avec GreenIt pour la première itération (bouton affichant les 25 recettes supplémentaires) :
 
 ![Consulter la Section Sport affichant les 25 recettes](./benchmarks/ConsulterSectionSport.png)
+
 __Fig.12__: Consulter la Section Sport affichant les 25 recettes sans appuyer sur le bouton affichant les 25 suivantes
 
 ![Appuie sur le bouton](./benchmarks/boutonChargerRecette.png)
+
 __Fig.13__: Appuie sur le bouton affichant les 25 recettes suivantes
 
 On remarque bien qu'une seule requête supplémentaires a été effectuée. Cela est donc en accord avec nos attentes. 
@@ -348,6 +353,7 @@ Ensuite pour l'itération 2 (barre de recherche), pour la comparaison, nous avon
 Voici les résultats de la deuxième itération avec GreenIt (Barre de recherche):
 
 ![Barre de recherche](./benchmarks/chercherRecettes.png)
+
 __Fig.14__: Chercher les recettes qui ont le motif "Ultrices" dans leur titre
 
 Nous remarquons bien que le nombre de requêtes n'a pas changé et que l'eco-index est très proche. Encore une fois, nous gardons une cohérence dans le score qui reste de A.
