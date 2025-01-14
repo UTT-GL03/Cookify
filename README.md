@@ -408,17 +408,17 @@ Pour aller plus loin dans l'optimisation de **Cookify**, plusieurs axes d'améli
 - **Optimisation Frontend** : Réduire la consommation des écrans en améliorant le rendu des pages et en limitant le temps d'affichage.
 - **Analyse Continue** : Intégrer un suivi régulier avec **GreenFrame** afin de mesurer et optimiser l'empreinte écologique à chaque mise à jour du projet.
 
-### Bilan du Cours
+## Bilan du Cours
 
 Ce cours nous a permis de découvrir et de mettre en pratique diverses méthodes et outils pour minimiser l'empreinte carbone de nos projets numériques. Voici les points clés que nous retenons et qui nous ont particulièrement surpris :
 
-#### Ce qui nous a surpris
+### Ce qui nous a surpris
 
 1. **Impact des Publicités** : Nous avons été étonnés de constater à quel point les publicités peuvent alourdir le poids des pages web et augmenter la consommation de ressources. Leur suppression a eu un effet significatif sur la réduction de notre empreinte carbone.
 2. **Efficacité des Outils de Mesure** : L'utilisation d'outils comme **GreenFrame**, **GreenIt** et l'intégration de mesures d'impact environnemental dans notre pipeline CI/CD via GitHub Actions nous ont permis de suivre en temps réel l'impact de nos modifications. Cela a été une révélation quant à l'importance de mesurer pour mieux optimiser.
 3. **Optimisation des Requêtes** : Nous avons appris que le simple fait de réduire le nombre de requêtes HTTP et d'optimiser celles qui sont nécessaires peut considérablement diminuer la consommation énergétique de notre site.
 
-#### Ce que nous retenons
+### Ce que nous retenons
 
 1. **Mesurer pour Optimiser** : La première étape pour réduire l'empreinte carbone est de mesurer l'impact actuel. Des outils comme **GreenFrame** ou encore **GreenIt** sont essentiels pour cette tâche.
 2. **Limiter les Publicités** : Les publicités sont souvent responsables d'une grande partie de la consommation de ressources. Les limiter ou les supprimer peut avoir un impact significatif.
