@@ -189,7 +189,7 @@ Pour les services existants, sur le graphique présentant l'utilisation dans le 
 
 __Fig.7__: Consommation de ressource lors de la consultation de la page des recettes de *Marmiton*.
 
-Pour notre prototype, au contraire, le graphique (cf. Fig.5) présente un pic significatif de consommation de CPU et de réseau. Les autres pics du CPU peuvent correspondre à l'utilisation d'autre processus s'exécutant sur la machine. L'autre petit pic réseau que l'on peut remarquer correspond sûrement à la façon dont on charge les données dans notre code directement.
+Pour notre prototype, au contraire, le graphique (cf. Fig.8) présente un pic significatif de consommation de CPU et de réseau. Les autres pics du CPU peuvent correspondre à l'utilisation d'autre processus s'exécutant sur la machine. L'autre petit pic réseau que l'on peut remarquer correspond sûrement à la façon dont on charge les données dans notre code directement.
 Notons par ailleurs que le pic de CPU est 70 fois plus faible que celui de la figure précédente.
 Par ailleurs, nous remarquons que cette consommation ne compte que pour 1% de la consommation totale, le reste étant consommé par l'écran et le réseau durant la durée de la mesure.
 
