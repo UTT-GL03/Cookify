@@ -183,13 +183,13 @@ Concernant l'évaluation de l'impact environemental du scénario, par rapport au
 
 __Tab.3__ : Impact en mg CO2e de la consultation proprement dite des pages des services existants et de notre prototype.
 
-Pour les services existants, sur le graphique présentant l'utilisation dans le temps des ressources (cf. Fig.4), on constate d'autres pics que le pic initial, probablement associés au chargement et à l'affichage de contenus multimédias et de publicités, ou causés par des techniques de pistage sur le Web.
+Pour les services existants, sur le graphique présentant l'utilisation dans le temps des ressources (cf. Fig.7), on constate d'autres pics que le pic initial, probablement associés au chargement et à l'affichage de contenus multimédias et de publicités, ou causés par des techniques de pistage sur le Web.
 
 ![Impact du site de recette Marmiton](./benchmarks/Marmiton_homepage.png)
 
 __Fig.7__: Consommation de ressource lors de la consultation de la page des recettes de *Marmiton*.
 
-Pour notre prototype, au contraire, le graphique (cf. Fig.5) présente un pic significatif de consommation de CPU et de réseau. Les autres pics du CPU peuvent correspondre à l'utilisation d'autre processus s'exécutant sur la machine. L'autre petit pic réseau que l'on peut remarquer correspond sûrement à la façon dont on charge les données dans notre code directement.
+Pour notre prototype, au contraire, le graphique (cf. Fig.8) présente un pic significatif de consommation de CPU et de réseau. Les autres pics du CPU peuvent correspondre à l'utilisation d'autre processus s'exécutant sur la machine. L'autre petit pic réseau que l'on peut remarquer correspond sûrement à la façon dont on charge les données dans notre code directement.
 Notons par ailleurs que le pic de CPU est 70 fois plus faible que celui de la figure précédente.
 Par ailleurs, nous remarquons que cette consommation ne compte que pour 1% de la consommation totale, le reste étant consommé par l'écran et le réseau durant la durée de la mesure.
 
@@ -197,7 +197,7 @@ Par ailleurs, nous remarquons que cette consommation ne compte que pour 1% de la
 
 __Fig.8__ : Consommation de ressources par le navigateur lors de la consultation de la page des titres dans notre prototype.
 
-Par ailleurs, il nous est possible désormais d'évaluer l'impact écologique de la partie "serveur", possiblement hébergée par un *data center* (cf. Fig.6).
+Par ailleurs, il nous est possible désormais d'évaluer l'impact écologique de la partie "serveur", possiblement hébergée par un *data center* (cf. Fig.9).
 Réduite au simple hébergement de données statiques sur un serveur Web, cette partie a pour l'instant un impact très faible et quasi négligeable par rapport à la partie "client" . 
 
 ![Impact du prototype](./benchmarks/Cookify_homepage_static_hosting.png)
@@ -304,13 +304,13 @@ Ces impacts sont liés principalement au volume élevé de données à gérer et
 
 **Passage à l'échelle : Impact de l'augmentation de la quantité de données**
 
-Lors du passage à 3000 recettes, nous avons observé une augmentation initiale de l'impact environnemental (cf. Fig. 10). Cette augmentation s'explique principalement par la charge accrue du réseau et la sollicitation plus importante des ressources, notamment pour transférer un plus grand nombre de données entre le backend et le frontend.
+Lors du passage à 3000 recettes, nous avons observé une augmentation initiale de l'impact environnemental (cf. Fig. 14). Cette augmentation s'explique principalement par la charge accrue du réseau et la sollicitation plus importante des ressources, notamment pour transférer un plus grand nombre de données entre le backend et le frontend.
 
-Cependant, après l'application de diverses optimisations, l'impact a été ramené à un niveau plus acceptable, proche de celui observé dans le prototype précédent (cf. Fig.9). Les optimisations ont permis de limiter l'impact malgré la quantité accrue de données.
+Cependant, après l'application de diverses optimisations, l'impact a été ramené à un niveau plus acceptable, proche de celui observé dans le prototype précédent (cf. Fig.13). Les optimisations ont permis de limiter l'impact malgré la quantité accrue de données.
 
 **Évolution de l'impact environnemental après correction**
 
-La stratégie choisie a eu l'effet escompté : les mesures d'impact (cf. Fig. 9) montrent que son implémentation a permis de contrecarrer l'augmentation de l'impact environnemental causée par le passage de 10 à 3000 recettes.
+La stratégie choisie a eu l'effet escompté : les mesures d'impact (cf. Fig. 13) montrent que son implémentation a permis de contrecarrer l'augmentation de l'impact environnemental causée par le passage de 10 à 3000 recettes.
 
 ![Graphique d'optimisation](./benchmarks/graphique_optimisation.png)
 
@@ -318,7 +318,7 @@ __Fig.13__: Graphique d'optimisation
 
 
 On peut voir qu'en optimisant notre code et en faisant en sorte qu'uniquement 25 recettes ne soient affichéees sur chaque page, nous avons réussi à obtenir des résultats très similaires à quand nous avions qu'une dizaine de données.
-Nous pouvons voir cette diminution sur la figure 10.
+Nous pouvons voir cette diminution sur la figure 14.
 
 
 ![resultat d'optimisation](./benchmarks/recette_optimise.png)
@@ -360,7 +360,7 @@ __Fig.16__: Appuie sur le bouton affichant les 25 recettes suivantes
 On remarque bien qu'une seule requête supplémentaires a été effectuée. Cela est donc en accord avec nos attentes. 
 De plus, les scores d'eco-index reste cohérent et obtienent une note de A.
 
-Ensuite pour l'itération 2 (barre de recherche), pour la comparaison, nous avons juste besoin de reprendre la consommation lorsque l'on clique sur la section sport (cf. Fig.11). 
+Ensuite pour l'itération 2 (barre de recherche), pour la comparaison, nous avons juste besoin de reprendre la consommation lorsque l'on clique sur la section sport (cf. Fig.15). 
 Voici les résultats de la deuxième itération avec GreenIt (Barre de recherche):
 
 ![Barre de recherche](./benchmarks/chercherRecettes.png)
