@@ -161,7 +161,7 @@ Avec l'ajout de ce modèle de page et la mise en place de la navigation entre le
 
 __Tab.2__: Évaluation de l'impact du scénario "Lire des recettes parmi les recettes du jour" dans le prototype n°1.
 
-Ces estimations bien qu'artificiellement basses (puisque les données sont chargées de manière statique) sont tout de même à comparer avec celle des site différents
+Ces estimations bien qu'artificiellement basses (puisque les données sont chargées de manière statique) sont tout de même à comparer avec celle des site différents.
 
 Si nous arrivons à maintenir les émissions en dessous de 1,5 g pour notre produit minimum viable, nous pouvons donc espérer proposer une alternative 2 à 3 fois moins impactante que les services existants.
 
