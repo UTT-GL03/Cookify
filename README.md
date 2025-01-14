@@ -305,7 +305,7 @@ __Fig.9__: Graphique d'optimisation
 
 
 On peut voir qu'en optimisant notre code et en faisant en sorte qu'uniquement 25 recettes ne soient affichéees sur chaque page, nous avons réussi à obtenir des résultats très similaires à quand nous avions qu'une dizaine de données.
-Nous pouvons voir cette diminution sur la figure 10
+Nous pouvons voir cette diminution sur la figure 10.
 
 
 ![resultat d'optimisation](./benchmarks/recette_optimise.png)
