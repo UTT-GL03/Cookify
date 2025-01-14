@@ -301,7 +301,7 @@ Cependant, après l'application de diverses optimisations, l'impact a été rame
 La stratégie choisie a eu l'effet escompté : les mesures d'impact (cf. Fig. 9) montrent que son implémentation a permis de contrecarrer l'augmentation de l'impact environnemental causée par le passage de 10 à 3000 recettes.
 
 ![Graphique d'optimisation](./benchmarks/graphique_optimisation.png)
-__Fig.9__: Graphique d'optimisation
+__Fig.10__: Graphique d'optimisation
 
 
 On peut voir qu'en optimisant notre code et en faisant en sorte qu'uniquement 25 recettes ne soient affichéees sur chaque page, nous avons réussi à obtenir des résultats très similaires à quand nous avions qu'une dizaine de données.
@@ -309,7 +309,7 @@ Nous pouvons voir cette diminution sur la figure 10.
 
 
 ![resultat d'optimisation](./benchmarks/recette_optimise.png)
-__Fig.10__: Comparaison de l'impact de la page des recettes optimisée avec 3000 recettes et non-optimisée.
+__Fig.11__: Comparaison de l'impact de la page des recettes optimisée avec 3000 recettes et non-optimisée.
 
 **Perspectives et Optimisations Futures**
 
@@ -336,10 +336,10 @@ Avant de vous montrer les résultats obtenus avec GreenIt, voici à quoi on s'at
 Voici les résultats avec GreenIt pour la première itération (bouton affichant les 25 recettes supplémentaires) :
 
 ![Consulter la Section Sport affichant les 25 recettes](./benchmarks/ConsulterSectionSport.png)
-__Fig.11__: Consulter la Section Sport affichant les 25 recettes sans appuyer sur le bouton affichant les 25 suivantes
+__Fig.12__: Consulter la Section Sport affichant les 25 recettes sans appuyer sur le bouton affichant les 25 suivantes
 
 ![Appuie sur le bouton](./benchmarks/boutonChargerRecette.png)
-__Fig.12__: Appuie sur le bouton affichant les 25 recettes suivantes
+__Fig.13__: Appuie sur le bouton affichant les 25 recettes suivantes
 
 On remarque bien qu'une seule requête supplémentaires a été effectuée. Cela est donc en accord avec nos attentes. 
 De plus, les scores d'eco-index reste cohérent et obtienent une note de A.
@@ -348,7 +348,7 @@ Ensuite pour l'itération 2 (barre de recherche), pour la comparaison, nous avon
 Voici les résultats de la deuxième itération avec GreenIt (Barre de recherche):
 
 ![Barre de recherche](./benchmarks/chercherRecettes.png)
-__Fig.12__: Chercher les recettes qui ont le motif "Ultrices" dans leur titre
+__Fig.14__: Chercher les recettes qui ont le motif "Ultrices" dans leur titre
 
 Nous remarquons bien que le nombre de requêtes n'a pas changé et que l'eco-index est très proche. Encore une fois, nous gardons une cohérence dans le score qui reste de A.
 
