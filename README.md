@@ -183,7 +183,7 @@ Concernant l'évaluation de l'impact environemental du scénario, par rapport au
 
 __Tab.3__ : Impact en mg CO2e de la consultation proprement dite des pages des services existants et de notre prototype.
 
-Pour les services existants, sur le graphique présentant l'utilisation dans le temps des ressources (cf. Fig.4), on constate d'autres pics que le pic initial, probablement associés au chargement et à l'affichage de contenus multimédias et de publicités, ou causés par des techniques de pistage sur le Web.
+Pour les services existants, sur le graphique présentant l'utilisation dans le temps des ressources (cf. Fig.7), on constate d'autres pics que le pic initial, probablement associés au chargement et à l'affichage de contenus multimédias et de publicités, ou causés par des techniques de pistage sur le Web.
 
 ![Impact du site de recette Marmiton](./benchmarks/Marmiton_homepage.png)
 
