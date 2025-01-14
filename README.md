@@ -89,12 +89,15 @@ L'interface retenue est composée de trois types de "pages Web" :
 - La page d'une recette.
 
 ![Maquette de la page d'accueil](./frontend/mockup_page_accueil.png)
+
 __Fig.1__: Maquette de la page d'accueil
 
 ![Maquette de la liste de recette](./frontend/mockup_liste_recette.png)
+
 __Fig.2__: Maquette de la liste de recette après avoir cliqué sur un programme 
 
 ![Maquette de la recette](./frontend/mockup_recette.png)
+
 __Fig.3__: Maquette d'une recette
 
 Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec [`dummy-json`](https://dummyjson.com)).
@@ -113,6 +116,7 @@ Pour cette première version du prototype :
 La page de sélection des catégories est conçue pour offrir aux utilisateurs un point d'entrée intuitif vers les différentes recettes disponibles en fonction de leurs préférences ou besoins. Dans cette page nous avons fait le choix de ne pas inclure d'image afin de rendre la page plus légère et plus respectueuse de l'environnement.
 
 ![page des categories](./frontend/categories.png)
+
 __Fig.4__: Page de choix des categories
 
 # Page de présentation des différentes recettes
@@ -120,6 +124,7 @@ __Fig.4__: Page de choix des categories
 Nous avons développé la page d'accueil pour qu'elle affiche l'échantillon de données sous une forme proche de ce que prévoyait la maquette.
 
 ![page d'accueil](./frontend/page_accueil.png)
+
 __Fig.5__: Page d'accueil
 
 Pour l'intant, notre design est minimaliste. Dans la suite du projet, nous verrons si l'impact environnemental du passage à un framework de mise en page plus puissant (comme Bootstrap) est acceptable.
@@ -143,6 +148,7 @@ Comme l'échantillon de données ne comportait pas d'identifiants pour les recet
 De même que précédemment, nous avons tenté d'implémenter cette page (cf. Fig. 3) conformément à ce que prévoyait la maquette.
 
 ![page info recettes](./frontend/info_recette.png)
+
 __Fig.6__: Page de la recette
 
 Avec l'ajout de ce modèle de page et la mise en place de la navigation entre les deux modèles, il devient possible d'exécuter le scénario prioritaire complet et de mesurer son impact.
@@ -180,6 +186,7 @@ __Tab.3__ : Impact en mg CO2e de la consultation proprement dite des pages des s
 Pour les services existants, sur le graphique présentant l'utilisation dans le temps des ressources (cf. Fig.4), on constate d'autres pics que le pic initial, probablement associés au chargement et à l'affichage de contenus multimédias et de publicités, ou causés par des techniques de pistage sur le Web.
 
 ![Impact du site de recette Marmiton](./benchmarks/Marmiton_homepage.png)
+
 __Fig.4__: Consommation de ressource lors de la consultation de la page des recettes de *Marmiton*.
 
 Pour notre prototype, au contraire, le graphique (cf. Fig.5) présente un pic significatif de consommation de CPU et de réseau. Les autres pics du CPU peuvent correspondre à l'utilisation d'autre processus s'exécutant sur la machine. L'autre petit pic réseau que l'on peut remarquer correspond sûrement à la façon dont on charge les données dans notre code directement.
@@ -187,12 +194,14 @@ Notons par ailleurs que le pic de CPU est 70 fois plus faible que celui de la fi
 Par ailleurs, nous remarquons que cette consommation ne compte que pour 1% de la consommation totale, le reste étant consommé par l'écran et le réseau durant la durée de la mesure.
 
 ![Impact du prototype](./benchmarks/Cookify_homepage.png)
+
 __Fig.5__ : Consommation de ressources par le navigateur lors de la consultation de la page des titres dans notre prototype.
 
 Par ailleurs, il nous est possible désormais d'évaluer l'impact écologique de la partie "serveur", possiblement hébergée par un *data center* (cf. Fig.6).
 Réduite au simple hébergement de données statiques sur un serveur Web, cette partie a pour l'instant un impact très faible et quasi négligeable par rapport à la partie "client" . 
 
 ![Impact du prototype](./benchmarks/Cookify_homepage_static_hosting.png)
+
 __Fig.6__ : Consommation de ressources par le serveur Web lors de la consultation de la page des titres dans notre prototype.
 
 ## Prototype n°3 : Fonctionnalités pour le scénario prioritaire avec données stockées dans une base de données
@@ -206,9 +215,11 @@ Nous avons effectué une analyse de l'empreinte carbone de notre prototype n°3 
 **Résultats Généraux**
 
 ![Consulter section sport Proto 3](./benchmarks/consulterSectionSport_Proto_V3.png)
+
 __Fig.7__: Consulter section sport Prototype 3
 
 ![Consulter une recette Proto 3](./benchmarks/consulterRecette_Proto_V3.png)
+
 __Fig.8__: Consulter une recette prototype V3
     
 **Différence entre les scénarios : Consulter la section "Sport" vs Consulter une recette**
