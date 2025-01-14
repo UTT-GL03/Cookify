@@ -256,7 +256,7 @@ Pour cette version du prototype, nous avons effectué une mise à l'échelle des
 Les résultats de l'analyse GreenFrame montrent un impact énergétique significativement plus élevé par rapport à lorsque l'on avait 25 recettes.Le passage à 3000 recettes a permis de mieux comprendre l'effet de la mise à l'échelle des données sur la consommation des différents composants de l'application.
 
 ![Consulter une Section](./benchmarks/ConsulterSection_ProtoV4.png)
-__Fig.9__: Consulter une Section Proto V4
+__Fig.9__: Consulter une Section Prototype V4
 
 
 Voici un résumé des résultats :
