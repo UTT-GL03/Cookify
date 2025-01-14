@@ -121,11 +121,11 @@ __Fig.4__: Page de choix des categories
 
 # Page de présentation des différentes recettes
 
-Nous avons développé la page d'accueil pour qu'elle affiche l'échantillon de données sous une forme proche de ce que prévoyait la maquette.
+Nous avons développé la page de liste des recettes pour qu'elle affiche l'échantillon de données sous une forme proche de ce que prévoyait la maquette.
 
-![page d'accueil](./frontend/page_accueil.png)
+![page d'accueil](./frontend/liste_recette_vege.png)
 
-__Fig.5__: Page d'accueil
+__Fig.5__: Page de la liste des recettes végé
 
 Pour l'intant, notre design est minimaliste. Dans la suite du projet, nous verrons si l'impact environnemental du passage à un framework de mise en page plus puissant (comme Bootstrap) est acceptable.
 
