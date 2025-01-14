@@ -399,3 +399,25 @@ Pour aller plus loin dans l'optimisation de **Cookify**, plusieurs axes d'améli
 - **Cache Avancé** : Mettre en place un système de mise en cache pour réduire la consommation lors de requêtes récurrentes.
 - **Optimisation Frontend** : Réduire la consommation des écrans en améliorant le rendu des pages et en limitant le temps d'affichage.
 - **Analyse Continue** : Intégrer un suivi régulier avec **GreenFrame** afin de mesurer et optimiser l'empreinte écologique à chaque mise à jour du projet.
+
+### Bilan du Cours
+
+Ce cours nous a permis de découvrir et de mettre en pratique diverses méthodes et outils pour minimiser l'empreinte carbone de nos projets numériques. Voici les points clés que nous retenons et qui nous ont particulièrement surpris :
+
+#### Ce qui nous a surpris
+
+1. **Impact des Publicités** : Nous avons été étonnés de constater à quel point les publicités peuvent alourdir le poids des pages web et augmenter la consommation de ressources. Leur suppression a eu un effet significatif sur la réduction de notre empreinte carbone.
+2. **Efficacité des Outils de Mesure** : L'utilisation d'outils comme **GreenFrame**, **GreenIt** et l'intégration de mesures d'impact environnemental dans notre pipeline CI/CD via GitHub Actions nous ont permis de suivre en temps réel l'impact de nos modifications. Cela a été une révélation quant à l'importance de mesurer pour mieux optimiser.
+3. **Optimisation des Requêtes** : Nous avons appris que le simple fait de réduire le nombre de requêtes HTTP et d'optimiser celles qui sont nécessaires peut considérablement diminuer la consommation énergétique de notre site.
+
+#### Ce que nous retenons
+
+1. **Mesurer pour Optimiser** : La première étape pour réduire l'empreinte carbone est de mesurer l'impact actuel. Des outils comme **GreenFrame** ou encore **GreenIt** sont essentiels pour cette tâche.
+2. **Limiter les Publicités** : Les publicités sont souvent responsables d'une grande partie de la consommation de ressources. Les limiter ou les supprimer peut avoir un impact significatif.
+3. **Filtrage des Données** : Ne récupérer que les données nécessaires et filtrer les données inutiles permet de réduire la quantité de données transférées et traitées.
+4. **Optimisation des Requêtes** : Réduire le nombre de requêtes HTTP et optimiser celles qui sont nécessaires est crucial pour diminuer la consommation énergétique.
+5. **Choix des Frameworks** : Utiliser des frameworks légers et remettre en question les dépendances permet de réduire l'empreinte carbone sans sacrifier les performances.
+6. **Comparatifs avec GreenIndex** : Comparer notre application avec des applications similaires comme PtitChef et Marmiton à l'aide de GreenIT nous a permis de situer notre impact et d'identifier des axes d'amélioration.
+7. **Limitation des Images** : Réduire le nombre d'images et optimiser celles qui sont nécessaires permet de diminuer le poids des pages et la consommation de bande passante.
+
+En conclusion, ce cours nous a non seulement sensibilisés à l'importance de réduire l'impact environnemental de nos services numériques, mais il nous a également fourni des outils et des méthodes concrètes pour y parvenir. Nous sommes désormais mieux équipés pour concevoir des applications plus respectueuses de l'environnement.
