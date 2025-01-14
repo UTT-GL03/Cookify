@@ -187,7 +187,7 @@ Pour les services existants, sur le graphique présentant l'utilisation dans le 
 
 ![Impact du site de recette Marmiton](./benchmarks/Marmiton_homepage.png)
 
-__Fig.4__: Consommation de ressource lors de la consultation de la page des recettes de *Marmiton*.
+__Fig.7__: Consommation de ressource lors de la consultation de la page des recettes de *Marmiton*.
 
 Pour notre prototype, au contraire, le graphique (cf. Fig.5) présente un pic significatif de consommation de CPU et de réseau. Les autres pics du CPU peuvent correspondre à l'utilisation d'autre processus s'exécutant sur la machine. L'autre petit pic réseau que l'on peut remarquer correspond sûrement à la façon dont on charge les données dans notre code directement.
 Notons par ailleurs que le pic de CPU est 70 fois plus faible que celui de la figure précédente.
@@ -195,14 +195,14 @@ Par ailleurs, nous remarquons que cette consommation ne compte que pour 1% de la
 
 ![Impact du prototype](./benchmarks/Cookify_homepage.png)
 
-__Fig.5__ : Consommation de ressources par le navigateur lors de la consultation de la page des titres dans notre prototype.
+__Fig.8__ : Consommation de ressources par le navigateur lors de la consultation de la page des titres dans notre prototype.
 
 Par ailleurs, il nous est possible désormais d'évaluer l'impact écologique de la partie "serveur", possiblement hébergée par un *data center* (cf. Fig.6).
 Réduite au simple hébergement de données statiques sur un serveur Web, cette partie a pour l'instant un impact très faible et quasi négligeable par rapport à la partie "client" . 
 
 ![Impact du prototype](./benchmarks/Cookify_homepage_static_hosting.png)
 
-__Fig.6__ : Consommation de ressources par le serveur Web lors de la consultation de la page des titres dans notre prototype.
+__Fig.9__ : Consommation de ressources par le serveur Web lors de la consultation de la page des titres dans notre prototype.
 
 ## Prototype n°3 : Fonctionnalités pour le scénario prioritaire avec données stockées dans une base de données
 
@@ -216,11 +216,11 @@ Nous avons effectué une analyse de l'empreinte carbone de notre prototype n°3 
 
 ![Consulter section sport Proto 3](./benchmarks/consulterSectionSport_Proto_V3.png)
 
-__Fig.7__: Consulter section sport Prototype 3
+__Fig.10__: Consulter section sport Prototype 3
 
 ![Consulter une recette Proto 3](./benchmarks/consulterRecette_Proto_V3.png)
 
-__Fig.8__: Consulter une recette prototype V3
+__Fig.11__: Consulter une recette prototype V3
     
 **Différence entre les scénarios : Consulter la section "Sport" vs Consulter une recette**
 
@@ -268,7 +268,7 @@ Les résultats de l'analyse GreenFrame montrent un impact énergétique signific
 
 ![Consulter une Section](./benchmarks/ConsulterSection_ProtoV4.png)
 
-__Fig.9__: Consulter une Section Prototype V4
+__Fig.12__: Consulter une Section Prototype V4
 
 
 Voici un résumé des résultats :
@@ -314,7 +314,7 @@ La stratégie choisie a eu l'effet escompté : les mesures d'impact (cf. Fig. 9)
 
 ![Graphique d'optimisation](./benchmarks/graphique_optimisation.png)
 
-__Fig.10__: Graphique d'optimisation
+__Fig.13__: Graphique d'optimisation
 
 
 On peut voir qu'en optimisant notre code et en faisant en sorte qu'uniquement 25 recettes ne soient affichéees sur chaque page, nous avons réussi à obtenir des résultats très similaires à quand nous avions qu'une dizaine de données.
@@ -323,7 +323,7 @@ Nous pouvons voir cette diminution sur la figure 10.
 
 ![resultat d'optimisation](./benchmarks/recette_optimise.png)
 
-__Fig.11__: Comparaison de l'impact de la page des recettes optimisée avec 3000 recettes et non-optimisée.
+__Fig.14__: Comparaison de l'impact de la page des recettes optimisée avec 3000 recettes et non-optimisée.
 
 **Perspectives et Optimisations Futures**
 
@@ -351,11 +351,11 @@ Voici les résultats avec GreenIt pour la première itération (bouton affichant
 
 ![Consulter la Section Sport affichant les 25 recettes](./benchmarks/ConsulterSectionSport.png)
 
-__Fig.12__: Consulter la Section Sport affichant les 25 recettes sans appuyer sur le bouton affichant les 25 suivantes
+__Fig.15__: Consulter la Section Sport affichant les 25 recettes sans appuyer sur le bouton affichant les 25 suivantes
 
 ![Appuie sur le bouton](./benchmarks/boutonChargerRecette.png)
 
-__Fig.13__: Appuie sur le bouton affichant les 25 recettes suivantes
+__Fig.16__: Appuie sur le bouton affichant les 25 recettes suivantes
 
 On remarque bien qu'une seule requête supplémentaires a été effectuée. Cela est donc en accord avec nos attentes. 
 De plus, les scores d'eco-index reste cohérent et obtienent une note de A.
@@ -365,7 +365,7 @@ Voici les résultats de la deuxième itération avec GreenIt (Barre de recherche
 
 ![Barre de recherche](./benchmarks/chercherRecettes.png)
 
-__Fig.14__: Chercher les recettes qui ont le motif "Ultrices" dans leur titre
+__Fig.17__: Chercher les recettes qui ont le motif "Ultrices" dans leur titre
 
 Nous remarquons bien que le nombre de requêtes n'a pas changé et que l'eco-index est très proche. Encore une fois, nous gardons une cohérence dans le score qui reste de A.
 
