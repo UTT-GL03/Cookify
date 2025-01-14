@@ -145,7 +145,7 @@ __Tab.1__: Évaluation de l'impact du prototype de la page d'accueil.
 Les pages des recettes ont pour HTTP-URI `/{id}`.
 Comme l'échantillon de données ne comportait pas d'identifiants pour les recettes, nous avons adopté pour l'intant leur titre en tant qu'identifiant.
 
-De même que précédemment, nous avons tenté d'implémenter cette page (cf. Fig. 3) conformément à ce que prévoyait la maquette.
+De même que précédemment, nous avons tenté d'implémenter cette page (cf. Fig. 6) conformément à ce que prévoyait la maquette.
 
 ![page info recettes](./frontend/info_recette.png)
 
