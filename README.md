@@ -183,13 +183,13 @@ Concernant l'évaluation de l'impact environemental du scénario, par rapport au
 
 __Tab.3__ : Impact en mg CO2e de la consultation proprement dite des pages des services existants et de notre prototype.
 
-Pour les services existants, sur le graphique présentant l'utilisation dans le temps des ressources (cf. Fig.7), on constate d'autres pics que le pic initial, probablement associés au chargement et à l'affichage de contenus multimédias et de publicités, ou causés par des techniques de pistage sur le Web.
+Pour les services existants, sur le graphique présentant l'utilisation dans le temps des ressources (cf. Fig.4), on constate d'autres pics que le pic initial, probablement associés au chargement et à l'affichage de contenus multimédias et de publicités, ou causés par des techniques de pistage sur le Web.
 
 ![Impact du site de recette Marmiton](./benchmarks/Marmiton_homepage.png)
 
 __Fig.7__: Consommation de ressource lors de la consultation de la page des recettes de *Marmiton*.
 
-Pour notre prototype, au contraire, le graphique (cf. Fig.8) présente un pic significatif de consommation de CPU et de réseau. Les autres pics du CPU peuvent correspondre à l'utilisation d'autre processus s'exécutant sur la machine. L'autre petit pic réseau que l'on peut remarquer correspond sûrement à la façon dont on charge les données dans notre code directement.
+Pour notre prototype, au contraire, le graphique (cf. Fig.5) présente un pic significatif de consommation de CPU et de réseau. Les autres pics du CPU peuvent correspondre à l'utilisation d'autre processus s'exécutant sur la machine. L'autre petit pic réseau que l'on peut remarquer correspond sûrement à la façon dont on charge les données dans notre code directement.
 Notons par ailleurs que le pic de CPU est 70 fois plus faible que celui de la figure précédente.
 Par ailleurs, nous remarquons que cette consommation ne compte que pour 1% de la consommation totale, le reste étant consommé par l'écran et le réseau durant la durée de la mesure.
 
@@ -197,7 +197,7 @@ Par ailleurs, nous remarquons que cette consommation ne compte que pour 1% de la
 
 __Fig.8__ : Consommation de ressources par le navigateur lors de la consultation de la page des titres dans notre prototype.
 
-Par ailleurs, il nous est possible désormais d'évaluer l'impact écologique de la partie "serveur", possiblement hébergée par un *data center* (cf. Fig.9).
+Par ailleurs, il nous est possible désormais d'évaluer l'impact écologique de la partie "serveur", possiblement hébergée par un *data center* (cf. Fig.6).
 Réduite au simple hébergement de données statiques sur un serveur Web, cette partie a pour l'instant un impact très faible et quasi négligeable par rapport à la partie "client" . 
 
 ![Impact du prototype](./benchmarks/Cookify_homepage_static_hosting.png)
@@ -268,7 +268,7 @@ Les résultats de l'analyse GreenFrame montrent un impact énergétique signific
 
 ![Consulter une Section](./benchmarks/ConsulterSection_ProtoV4.png)
 
-__Fig.12__: Consulter une Section Prototype V4
+__Fig.12__: Consulter une Section après le passage à 3000 recettes
 
 
 Voici un résumé des résultats :
@@ -304,13 +304,13 @@ Ces impacts sont liés principalement au volume élevé de données à gérer et
 
 **Passage à l'échelle : Impact de l'augmentation de la quantité de données**
 
-Lors du passage à 3000 recettes, nous avons observé une augmentation initiale de l'impact environnemental (cf. Fig. 14). Cette augmentation s'explique principalement par la charge accrue du réseau et la sollicitation plus importante des ressources, notamment pour transférer un plus grand nombre de données entre le backend et le frontend.
+Lors du passage à 3000 recettes, nous avons observé une augmentation initiale de l'impact environnemental (cf. Fig. 12). Cette augmentation s'explique principalement par la charge accrue du réseau et la sollicitation plus importante des ressources, notamment pour transférer un plus grand nombre de données entre le backend et le frontend.
 
-Cependant, après l'application de diverses optimisations, l'impact a été ramené à un niveau plus acceptable, proche de celui observé dans le prototype précédent (cf. Fig.13). Les optimisations ont permis de limiter l'impact malgré la quantité accrue de données.
+Cependant, après l'application de diverses optimisations, l'impact a été ramené à un niveau plus acceptable, proche de celui observé dans le prototype précédent (cf. Fig.10). Les optimisations ont permis de limiter l'impact malgré la quantité accrue de données.
 
 **Évolution de l'impact environnemental après correction**
 
-La stratégie choisie a eu l'effet escompté : les mesures d'impact (cf. Fig. 13) montrent que son implémentation a permis de contrecarrer l'augmentation de l'impact environnemental causée par le passage de 10 à 3000 recettes.
+La stratégie choisie a eu l'effet escompté : le graphique des mesures (cf fig. 13) montrent que son implémentation a permis de contrecarrer l'augmentation de l'impact environnemental causée par le passage de 10 à 3000 recettes.
 
 ![Graphique d'optimisation](./benchmarks/graphique_optimisation.png)
 
@@ -325,7 +325,7 @@ Nous pouvons voir cette diminution sur la figure 14.
 
 __Fig.14__: Comparaison de l'impact de la page des recettes optimisée avec 3000 recettes et non-optimisée.
 
-**Perspectives et Optimisations Futures**
+## Futur implémentation de nos 2 fonctionnalités 
 
 Actuellement notre site permet d'afficher uniquement 25 recettes par section.
 La première optimisation serait, dans un premier temps, d'implémenter un bouton permettant de charger 25 recettes en plus à chaques fois. Cela permet à un utilisateur de consulter un plus grand nombre de recettes sans avoir à recharger les 25 premières.
@@ -335,7 +335,7 @@ Cette approche permet de limiter la quantité de données chargées en mémoire 
 
 Ces deux optimisations sont essentielles pour notre site, car elles allient l'objectif de réduire les émissions liées à l'utilisation de l'application à la nécessité de maintenir une expérience utilisateur intuitive et agréable.
 
-**Itérations implémentées**
+## Implémentation de la restriction du chargement des données et de la fonction de recherche  
 
 Nous avons fini d'implémenter les deux itérations que nous avions choisis
 - Le bouton permettant de charger 25 recettes de plus,
@@ -343,9 +343,13 @@ Nous avons fini d'implémenter les deux itérations que nous avions choisis
 
 Pour notre analyse de ces deux fonctionnalités, nous avons dû prendre GreenIt. En effet, GreenFrame ne nous permettant pas de cliquer sur un bouton et de faire un prompt dans notre barre de recherche, nous nous sommes adaptés et avons choisi une autre solution.
 
+### Resultats attendus
+
 Avant de vous montrer les résultats obtenus avec GreenIt, voici à quoi on s'attend: 
 - Pour le chargement des 25 recettes supplémentaires, on s'attend à avoir une seule requête en plus et non le nouveau chargement des 25 précédentes plus les 25 nouvelles
-- Pour la barre de recherche, on s'attend à ne pas avoir de requêtes supplémentaires car elle recherche uniquement sur les données qui ont déjà été fetch. 
+- Pour la barre de recherche, on s'attend à ne pas avoir de requêtes supplémentaires car elle recherche uniquement sur les données qui ont déjà été fetch.
+
+### Resultats réels
 
 Voici les résultats avec GreenIt pour la première itération (bouton affichant les 25 recettes supplémentaires) :
 
@@ -360,12 +364,16 @@ __Fig.16__: Appuie sur le bouton affichant les 25 recettes suivantes
 On remarque bien qu'une seule requête supplémentaires a été effectuée. Cela est donc en accord avec nos attentes. 
 De plus, les scores d'eco-index reste cohérent et obtienent une note de A.
 
-Ensuite pour l'itération 2 (barre de recherche), pour la comparaison, nous avons juste besoin de reprendre la consommation lorsque l'on clique sur la section sport (cf. Fig.15). 
+Ensuite pour l'itération 2 (barre de recherche), pour la comparaison, nous avons juste besoin de reprendre la consommation lorsque l'on clique sur la section sport (cf. Fig.18). 
 Voici les résultats de la deuxième itération avec GreenIt (Barre de recherche):
 
 ![Barre de recherche](./benchmarks/chercherRecettes.png)
 
 __Fig.17__: Chercher les recettes qui ont le motif "Ultrices" dans leur titre
+
+![Consulter section sport](./benchmarks/consulterSectionSport_GreenIndex.png)
+
+__Fig.18__: Consulter la section sport
 
 Nous remarquons bien que le nombre de requêtes n'a pas changé et que l'eco-index est très proche. Encore une fois, nous gardons une cohérence dans le score qui reste de A.
 
