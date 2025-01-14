@@ -197,7 +197,7 @@ Par ailleurs, nous remarquons que cette consommation ne compte que pour 1% de la
 
 __Fig.8__ : Consommation de ressources par le navigateur lors de la consultation de la page des titres dans notre prototype.
 
-Par ailleurs, il nous est possible désormais d'évaluer l'impact écologique de la partie "serveur", possiblement hébergée par un *data center* (cf. Fig.6).
+Par ailleurs, il nous est possible désormais d'évaluer l'impact écologique de la partie "serveur", possiblement hébergée par un *data center* (cf. Fig.9).
 Réduite au simple hébergement de données statiques sur un serveur Web, cette partie a pour l'instant un impact très faible et quasi négligeable par rapport à la partie "client" . 
 
 ![Impact du prototype](./benchmarks/Cookify_homepage_static_hosting.png)
