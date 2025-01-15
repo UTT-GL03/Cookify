@@ -206,14 +206,13 @@ __Fig.9__ : Consommation de ressources par le serveur Web lors de la consultatio
 
 ### Comparaison entre Prototype n°2 et Prototype n°3
 
+| **Critère**                  | **Prototype n°2**                                              | **Prototype n°3**                                          |
 |------------------------------|----------------------------------------------------------------|-----------------------------------------------------------|
 | **Source des Données**       | Données statiques chargées dynamiquement                       | Données stockées dans une base de données                 |
 | **Impact Carbone**           | 31 mg CO2e par consultation                                    | 32 mg CO2e par consultation                                |
 | **Publicités**               | Absence de publicités                                          | Absence de publicités                                      |
 | **Requêtes HTTP**            | Une requête supplémentaire par page affichée                   | Requêtes optimisées via API Web                            |
-| **Dépendances**              | Utilisation de frameworks plus lourds                          | Adoption de frameworks plus légers                         |
 | **Chargement des Données**   | Chargement dynamique des données statiques                     | Chargement optimisé via une base de données                |
-| **Expérience Utilisateur**   | Interface moins fluide en raison des optimisations absentes    | Interface fluide et agréable malgré les optimisations      |
 | **Consommation CPU**         | Pic significatif de consommation de CPU                        | Consommation CPU optimisée                                 |
 | **Consommation Réseau**      | Pic significatif de consommation de réseau                     | Consommation réseau optimisée                              |
 | **Impact Serveur**           | Impact très faible et quasi négligeable                        | Impact serveur plus élevé mais mieux réparti               |
